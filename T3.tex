@@ -26,10 +26,10 @@
 \section{\label{sec:pre}Prerequisites}
 \begin{itemize}
 \item StochSS 1.4 (or later) installed on your computer (please follow download and installation instructions at \url{www.stochss.org}). 
-\item A basic understanding of well mixed discrete stochastic simulations and models based on ordinary differential equations \cite{dan,sundials}.
+\item A basic understanding of well-mixed discrete stochastic simulations and models based on ordinary differential equations \cite{dan,sundials}.
 \item A basic knowledge of the MCEM$^2$ method \cite{bernie,dan,caffo}. 
-\item  A basic knowledge of the functionalities in the StochSS GUI (please consult the \textit{Basic Introduction to StochSS} tutorial).
-\item The following login screen appears on your browser: please log in.
+\item  A basic familiarity with the StochSS GUI (please consult the \textit{Basic Introduction to StochSS} tutorial).
+\item The following login screen appears in your browser; please log in.
 \end{itemize}
 
 \begin{figure}[!htb]
@@ -37,7 +37,7 @@
 \includegraphics[scale=0.6]{user-login.pdf}
 \end{figure}
 
-\section{Parameter Estimation for Stochastic Biochemical Systems - StochOptim}
+\section{StochOptim: Parameter Estimation for Stochastic Biochemical Systems}
 StochSS implements parameter estimation for stochastic biochemical systems (StochOptim) via the Monte Carlo expectation-maximization with Modified Cross-Entropy method (MCEM$^2$) \cite{bernie}.
 MCEM$^2$ computes maximum likelihood parameter estimates (MLEs) and associated uncertainties in three consecutive phases: cross-entropy, Monte Carlo expectation-maximization (MCEM), and uncertainty quantification \cite{bernie}.
 
@@ -47,7 +47,7 @@ After the model has been imported:
 \begin{itemize}
 \item \textbf{Select} \textcolor{blue}{Parameter estimation} from the menu on the left of the screen.
 \item \textbf{Click} on the \textcolor{blue}{Next} button (make sure that the right model is selected). This will open the Simulation page.
-\item On the Simulation page, \textbf{select} only parameter k1 (in this example the default value of k2 is already optimized. This is done to make the convergence process faster) and upload the data files that will be used for the parameter estimation.
+\item On the Simulation page, \textbf{select} only parameter k1. In this example the default value of k2 is already optimized. This is done to make the convergence process faster. Upload the data files that will be used for the parameter estimation.
 \item Example files (StochOptim input data) for the initial conditions and the trajectories are provided in the \textit{examples} folder (included in your StochSS package) and are named \textit{birthDeathInitial.txt} and \textit{birthDeathTrajectories.txt}, respectively.
 \item Now we are ready to start the parameter estimation routine clicking on the \textcolor{blue}{Run Locally} button at the bottom of the page. 
 \item \textbf{Select} \textcolor{blue}{Job Status} from the menu on the left of the screen to monitor the status of your running calculation.
@@ -58,8 +58,8 @@ After the model has been imported:
 \end{itemize}
 
 \subsection{StochOptim file format}
-The Stochoptim input data format consists of two, tab-separated text-based input files.
-The first represents the initial conditions of the system, and the second represents trajectories of it.
+The StochOptim input data format consists of two, tab-separated text-based input files.
+The first file represents the initial conditions of the system, and the second file represents trajectories of it.
 Each file has three base columns. \textit{Time}, \textit{Rep}, and \textit{Weight}. Additional columns are added for every species in the model that parameter estimation is to be run on. The \textit{Time} column contains the time values of the various trajectories (and should be set to zero for the initial conditions file). The \textit{Rep} column is used to include multiple trajectories in one file for fitting. Basically each trajectory should have a different \textit{Rep} number. An example of this can be seen by comparing the files \textit{birthDeathTrajectories.txt} and \textit{birthDeathTrajectoriesMulti.txt} in the \textit{examples} folder included in the StochSS package. The \textit{Weight} column is currently unused and should be set to $1$. The rest of the columns should be named after the species (case-sensitive) in the model the data will be fit against, and the columns themselves should contain integers representing the population counts at the various time points.
 
 \newpage
