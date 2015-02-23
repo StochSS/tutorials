@@ -26,9 +26,9 @@
 \section{\label{sec:pre}Prerequisites}
 \begin{itemize}
 \item StochSS 1.4 (or later) installed on your computer (please follow download and installation instructions at \url{www.stochss.org}). 
-\item A basic understanding of well mixed discrete stochastic simulations and models based on ordinary differential equations \cite{dan,sundials}. 
-\item  A basic knowledge of the functionalities in the StochSS GUI (please consult the \textit{Basic Introduction to StochSS} tutorial).
-\item The following login screen appears on your browser: please log in.
+\item A basic understanding of well-mixed discrete stochastic simulations and models based on ordinary differential equations \cite{dan,sundials}. 
+\item  A basic familiarity with the StochSS GUI (please consult the \textit{Basic Introduction to StochSS} tutorial).
+\item The following login screen appears in your browser; please log in.
 \end{itemize}
 
 \begin{figure}[!htb]
@@ -62,7 +62,7 @@ The analysis of the relative importance of various parameters in determining the
 \frac{\partial P(t)}{\partial V_{max}} \cdot \frac{V_{max}}{P(t)} = \frac{\partial \log(P(t))}{\partial\log(V_{max})}.
 \end{equation}
 
-Using elasticities for parameter comparison is certainly an improvement with respect to the use of unscaled sensitivities. However, it is worth reminding that the use of elasticity may lead to artifacts \cite{scale}. After all, elasticity is just one possible transformation that can be applied to the sensitivities. An interesting discussion about sensitivity transformations in ecology is given in Ref.~\cite{scale}. \\
+Using elasticities for parameter comparison is certainly an improvement with respect to the use of unscaled sensitivities. However, it is worth remembering that the use of elasticity may lead to artifacts \cite{scale}. After all, elasticity is just one possible transformation that can be applied to the sensitivities. An interesting discussion about sensitivity transformations in ecology is given in Ref.~\cite{scale}. \\
 Among many possible transformation/scaling techniques, we would like to mention the \textbf{dimensionless scaled sensitivity} defined as \cite{calib}:
 
 \begin{equation}
@@ -74,7 +74,7 @@ and the \textbf{composite scaled sensitivity} defined as \cite{calib}:
 css(t,V_{max}) = \sqrt \frac{\sum_{t=1}^N \left(dss(t,V_{max})\right)^2}{N},
 \end{equation}
 where $N$ is the number of observations.\\
-Model simulation results will be more sensitive to parameters with larger \textit{elasticities}, \textit{css} and \textit{css} values.\\
+Model simulation results will be more sensitive to parameters with larger \textit{elasticities}, \textit{css}, and \textit{dss} values.\\
 The following simple \textit{octave/matlab} script uploads the data from a simulation run  \footnote{Please consult the \textit{Basic Introduction to StochSS} tutorial for instructions on how to download your simulation data.} (file \textit{output.txt}) of the Michaelis-Menten model, implements different scaling procedures and plots some of the results:
 
 \newpage
