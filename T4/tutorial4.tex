@@ -1,37 +1,38 @@
 \chapter{Spatial Stochastic Simulations with StochSS}
 
-\section{\label{sec:pre}Prerequisites}
-\begin{itemize}
-%\item StochSS 1.4 (or later) installed on your computer (please follow download and installation instructions at \url{www.stochss.org}). 
-%\item A basic understanding of well-mixed discrete stochastic simulations and models based on ordinary differential equations \cite{dan,sundials}.
-\item A basic knowledge of the mesoscopic reaction-diffusion master equation and of the Next Subvolume Method (NSM) \cite{nsm}.
-%\item  A basic knowledge of the functionalities in the StochSS GUI (please consult the \textit{Basic Introduction to StochSS} tutorial).
-%\item The following login screen appears in your browser; please log in.
-\end{itemize}
+%\section{\label{sec:pre}Prerequisites}
+%\begin{itemize}
+%%\item StochSS 1.4 (or later) installed on your computer (please follow download and installation instructions at \url{www.stochss.org}). 
+%%\item A basic understanding of well-mixed discrete stochastic simulations and models based on ordinary differential equations \cite{dan,sundials}.
+%\item A basic knowledge of the mesoscopic reaction-diffusion master equation and of the Next Subvolume Method (NSM) \cite{nsm}.
+%%\item  A basic knowledge of the functionalities in the StochSS GUI (please consult the \textit{Basic Introduction to StochSS} tutorial).
+%%\item The following login screen appears in your browser; please log in.
+%\end{itemize}
 
 %\begin{figure}[!ht]
 %\centering
 %\includegraphics[scale=0.55]{T4/user-login.pdf}
 %\end{figure}
 
-\newpage
+%\newpage
+
+The spatial stochastic simulation capabilities in StochSS are based on PyURDME \cite{urdme}. PyURDME is a general software framework for modeling and simulation of stochastic reaction-diffusion processes on unstructured, tetrahedral (3D) and triangular (2D) meshes. Unstructured meshes allow for a more flexible handling of complex geometries compared to structured, Cartesian meshes. The current core simulation algorithm is based on the mesoscopic reaction-diffusion master equation (RDME) model. The default solver is an efficient implementation of the NSM.
 
 \section{Spatial Stochastic Simulations}
-The spatial stochastic simulation capabilities in StochSS are based on PyURDME \cite{urdme}. PyURDME is a general software framework for modeling and simulation of stochastic reaction-diffusion processes on unstructured, tetrahedral (3D) and triangular (2D) meshes. Unstructured meshes allow for a more flexible handling of complex geometries compared to structured, Cartesian meshes. The current core simulation algorithm is based on the mesoscopic reaction-diffusion master equation (RDME) model. The default solver is an efficient implementation of the NSM.
 
 \subsection{An Instructive Example}
 We will build a simple model based on an annihilation reaction between two chemical species generated  by sources located at the two opposite bases of an enclosing cylinder.
 
-The creation of our new spatial model using the \textcolor{blue}{Model editor} progresses through the following steps:
+The creation of our new spatial model using the \textbf{Model editor} progresses through the following steps:
 \begin{itemize}
-\item \textbf{Navigate} to the main \textcolor{blue}{Model editor} (the \textcolor{blue}{`Model'} tag is selected by default).
-\item \textbf{Enter} a model name in the \textcolor{blue}{`Name'} text box, select the \textcolor{blue}{`Population'} button and the \textcolor{blue}{`Spatial'} button. Finally, \textbf{click} on the \textcolor{blue}{`Create model'}  button.
- \item \textbf{Click} on the \textcolor{blue}{`Species'} tag to define chemical species names and their diffusion coefficient. 
- \item \textbf{Use} the \textcolor{blue}{`Add species'} button on the right to add \textit{A} and \textit{B} species both with diffusion coefficient $D=1$.
- \item \textbf{Click} on the \textcolor{blue}{`Parameters'} tag to define model parameters names and their expressions. 
- \item \textbf{Use} the \textcolor{blue}{`Add parameter'} button to add parameter \textit{k1} with a value of $100$.
- \item \textbf{Click} on the \textcolor{blue}{`Reactions'} tag to define reaction names, reactants, products and propensities.
- \item \textbf{Use} the \textcolor{blue}{`Add reaction'} button to add reactions \textit{R1, R2, R3} (see Fig.~\ref{fig:2}). To insert reaction R1 and R2 (`birth' reactions) leave the `Reactants' text box empty and type in the name of the generated species in the `Products' text box.
+\item Navigate to the main \textbf{Model editor} (the \textbf{Model} tag is selected by default).
+\item Enter a model name in the \textcolor{blue}{`Name'} text box, select the \textcolor{blue}{`Population'} button and the \textcolor{blue}{`Spatial'} button. Finally, click on the \textcolor{blue}{`Create model'}  button.
+ \item Click on the \textcolor{blue}{`Species'} tag to define chemical species names and their diffusion coefficient. 
+ \item Use the \textcolor{blue}{`Add species'} button on the right to add \textit{A} and \textit{B} species both with diffusion coefficient $D=1$.
+ \item Click on the \textcolor{blue}{`Parameters'} tag to define model parameters names and their expressions. 
+ \item Use the \textcolor{blue}{`Add parameter'} button to add parameter \textit{k1} with a value of $100$.
+ \item Click on the \textcolor{blue}{`Reactions'} tag to define reaction names, reactants, products and propensities.
+ \item Use the \textcolor{blue}{`Add reaction'} button to add reactions \textit{R1, R2, R3} (see Fig.~\ref{fig:2}). To insert reaction R1 and R2 (`birth' reactions) leave the `Reactants' text box empty and type in the name of the generated species in the `Products' text box.
  To define R3 (the annihilation reaction), enter the species names separated by a comma in the 
 `Reactants' text box. Leave the `Products' text box empty. Check out the on-screen help buttons.
  \item \textbf{Click} on the \textcolor{blue}{`Mesh'} tag and select `Cylinder'. You will notice that the cylindrical mesh is divided in three subdomains. Select the proper `buttons' in sections 3 and 4 on the `Mesh' page. Keep in mind that species A is generated in subdomain 1, whereas species B is generated in subdomain 3. Both species are allowed to diffuse everywhere within the cylinder (in all three subdomains). In other words, reaction R1 should be limited to subdomain 1 and reaction R2 to subdomain 3. Reaction R3 can happen in all three subdomains.
