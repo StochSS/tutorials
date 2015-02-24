@@ -1,26 +1,12 @@
 \chapter{Cloud Computing with StochSS}
 
-%\section{\label{sec:pre}Prerequisites}
-%\begin{itemize}
-%\item StochSS 1.4 (or later) installed on your computer (please follow download and installation instructions at \url{www.stochss.org}). 
-%\item A basic understanding of well-mixed discrete stochastic simulations and models based on ordinary differential equations \cite{dan,sundials}.
-%\item A basic knowledge of the mesoscopic reaction-diffusion master equation and of the Next Subvolume Method (NSM) \cite{nsm}.
-%\item  A basic knowledge of the functionalities in the StochSS GUI (please consult the \textit{Basic Introduction to StochSS} tutorial).
-%\item The following login screen appears in your browser; please log in.
-%\end{itemize}
-%
-%\begin{figure}[!ht]
-%\centering
-%\includegraphics[scale=0.55]{T6/user-login.pdf}
-%\end{figure}
-
 \section{Credentials}
-StochSS provides the options to run different types of jobs using the cloud infrastructures. In StochSS 1.2-1.5, the cloud services it has are all by Amazon Web Service (AWS). In order to use AWS Elastic Computing Cloud (EC2), Simple Storage Service (S3) and DynamoDB database, which are all required by running jobs in the cloud, you should be prepared to have at least one AWS account and one credential (access key pair) in hand. 
+StochSS provides the options to run different types of jobs using the cloud infrastructures. In StochSS 1.2-1.5, the cloud services it has are all by Amazon Web Service (AWS). In order to use AWS Elastic Computing Cloud (EC2), Simple Storage Service (S3) and DynamoDB database, which are all required by running jobs in the cloud, you should be prepared to have at least one AWS account and one credential (key pair) in hand. 
 
 More information regarding how to create an AWS account or a security credential can be found here: \url{http://aws.amazon.com}
 
 \subsection{An Instructive Example on Setting Credentials}
-The StochSS will validate the credentials (access key pairs) you have to be authorized to run job in the cloud. 
+The StochSS will validate the credentials you to run job in the cloud. 
 
 An example will be shown to you on how to validate your credentials in StochSS through the following steps:
 
@@ -32,11 +18,11 @@ An example will be shown to you on how to validate your credentials in StochSS t
 \end{figure}
 
 \begin{itemize}
-\item \textbf{Navigate} to the main \textcolor{blue}{Cloud Computing} page by \textbf{clicking} the ``Cloud Computing' on the side bar.
+\item Navigate to the main \textbf{Cloud Computing} page by from \textbf{Cloud Computing} from the side bar.
 \item \textbf{Type in} or \textbf{copy} the access key id of your credentials in \textcolor{blue}{'Access Key'} text box.
- \item \textbf{Type in} or \textbf{copy} the secret access key of your credentials in \textcolor{blue}{`Secret Key'} text box. 
- \item \textbf{Click} on the \textcolor{blue}{'Save credentials'} button to save your credentials into the database. Whenever there is no computing node running (the nodes can be seen in the 'Status of VMs' section down the same page) with your current credentials, you could always change your credentials to another and save to restore them.
- \item \textbf{Double check} the credentials are valid by seeing the message below.
+ \item Enter the secret access key of your credentials in the \textbf{Secret Key} text box. 
+ \item Click \textbf{Save credentials} to save your credentials into the database. Whenever there is no compute node running (the nodes can be seen in the \textbf{Status of VMs} section down the same page) with your current credentials, you can change your credentials and save to restore them.
+ \item Double check the credentials are valid by seeing the message below.
 
 \end{itemize}
 
@@ -124,7 +110,7 @@ An example shown below will guide you on how to analyze the cost of reproduce an
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[scale=0.35]{T6/T6_fig_costanalysis.png}
+\includegraphics[scale=0.30]{T6/T6_fig_costanalysis.png}
 \caption{'Cost Analysis' page}
 \label{fig:2}
 \end{figure}
@@ -135,6 +121,6 @@ An example shown below will guide you on how to analyze the cost of reproduce an
 \item \textbf{Click} the \textcolor{blue}{'Cost Analysis'} button in the \textcolor{blue}{Reproduction and Cost Analysis} section.
 \item \textbf{Click} the \textcolor{blue}{'Analyze'} button with the node type you would like to run and analyze. The page will auto refresh after the request is submitted and show its status of the analysis. If the analysis remaining to be \textcolor{blue}{'active'}, \textbf{click} the \textcolor{blue}{'Refresh'} button to refresh the status.
 \item If the running is \textcolor{blue}{'finished'}, the time and money cost of running the job with the node type you chose will be plotted in the graph below for comparison.
+\item \textbf{By default}, the cost of the job run for the first time will be recorded by cost analysis automatically, so that it doesn't need to rerun for the same instance type.
 \end{itemize}
-
 
