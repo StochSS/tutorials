@@ -29,7 +29,7 @@ The creation of our new spatial model using the \textbf{Model editor} progresses
 \item Add a new model. Select the option \textbf{Population, spatial} in the dropdown menu.
 \item Add two species, $A$ and $B$, both with diffusion constant 1.
 \item Add a parameter $k1$, and set its value to 100.
-\item Add three reactions, $R1$, $R2$, and $R3$: $\emptyset\to A$, $\emptyset\to B$, and $A+B\to\emptyset$.
+\item Add three reactions, $R1$, $R2$, and $R3$: $\emptyset\to A$, $\emptyset\to B$, and $A+B\to\emptyset$, all with rate $k1$.
 % \item Click on the \textcolor{blue}{`Species'} tag to define chemical species names and their diffusion coefficient. 
 % \item Use the \textcolor{blue}{`Add species'} button on the right to add \textit{A} and \textit{B} species both with diffusion coefficient $D=1$.
 % \item Click on the \textcolor{blue}{`Parameters'} tag to define model parameters names and their expressions. 
@@ -39,7 +39,7 @@ The creation of our new spatial model using the \textbf{Model editor} progresses
 % To define R3 (the annihilation reaction), enter the species names separated by a comma in the 
 %`Reactants' text box. Leave the `Products' text box empty. Check out the on-screen help buttons.
  \item Click the \textbf{Mesh} tag and select \textbf{Cylinder}. You will notice that the cylindrical mesh is divided in three subdomains. Species $A$ should be generated in subdomain 1 and species $B$ in subdomain 3. Therefore reaction $R1$ should be restricted to subdomain 1 and reaction $R2$ to subdomain 3. Reaction $R3$ should be allowed throughout the whole domain.
- \item As an initial condition, select \textbf{scatter} and add 500 molecules of species $A$ in subdomain 1 and 500 molecules of species $B$ in subdomain 3. 
+ \item For initial condition, select \textbf{scatter} and add 500 molecules of species $A$ in subdomain 1 and 500 molecules of species $B$ in subdomain 3. 
  %Select the proper buttons in sections 3 and 4 on the Mesh page. Keep in mind that species A is generated in subdomain 1, whereas species B is generated in subdomain 3. Both species are allowed to diffuse everywhere within the cylinder (in all three subdomains). In other words, reaction R1 should be limited to subdomain 1 and reaction R2 to subdomain 3. Reaction R3 can happen in all three subdomains.
  %\item \textbf{Click} on the \textcolor{blue}{`Add Initial Condition'} button and \textcolor{blue}{`Select'} `Scatter`, `A`, `Subdomain = 1`,`Count = 500`. \textbf{Click} ', `B`, `Subdomain = 3',`Count = 500'. \textbf{Click} on the \textcolor{blue}{`Add Initial Condition'} button.
 \item Your spatial model is now complete and ready to be simulated.
