@@ -1,19 +1,20 @@
 \chapter{Cloud Computing with StochSS}
 
 \section{Credentials}
-StochSS provides the options to run different types of jobs using the cloud infrastructures. In StochSS 1.2-1.5, the cloud services it has are all by Amazon Web Service (AWS). In order to use AWS Elastic Computing Cloud (EC2), Simple Storage Service (S3) and DynamoDB database, which are all required by running jobs in the cloud, you should be prepared to have at least one AWS account and one credential (key pair) in hand. 
+StochSS provides the option to run different types of jobs using the cloud infrastructures. In StochSS 1.2-1.5, the cloud service utilizes Amazon Web Service (AWS). In order to use AWS Elastic Computing Cloud (EC2), Simple Storage Service (S3) and DynamoDB database, which are all required to run jobs in the cloud, you need an AWS account and credentials (a key pair). 
 
-More information regarding how to create an AWS account or a security credential can be found here: \url{http://aws.amazon.com}
+More information on how to create an AWS account or on how to retrieve your security credentials can be found here: \url{http://aws.amazon.com}
 
-\subsection{An Instructive Example on Setting Credentials}
-The StochSS will validate the credentials you to run job in the cloud. 
-
-An example will be shown to you on how to validate your credentials in StochSS through the following steps:
+\subsection{Setting Credentials}
+%The StochSS will validate the credentials you to run job in the cloud. 
+To run a job in the cloud, StochSS has to validate your credentials.
+%Follow the steps below to let StochSS
+%An example will be shown to you on how to validate your credentials in StochSS through the following steps:
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.45]{T6/T6_fig_credentials.png}
-\caption{'Cloud Computing' page - 'Credentials' section}
+\caption{Cloud Computing page - Credentials section}
 \label{fig:2}
 \end{figure}
 
@@ -21,15 +22,15 @@ An example will be shown to you on how to validate your credentials in StochSS t
 \item Navigate to the main \textbf{Cloud Computing} page.
 \item Enter the access key id of your credentials in \textbf{Access Key} text box.
  \item Enter the secret access key of your credentials in the \textbf{Secret Key} text box. 
- \item Click \textbf{Save credentials} to save your credentials into the database. Whenever there is no compute node running (the nodes can be seen in the \textbf{Status of VMs} section down the same page) with your current credentials, you can change your credentials and save to restore them.
+ \item Click \textbf{Save credentials} to save your credentials into the database. %Whenever there is no compute node running (the nodes can be seen in the \textbf{Status of VMs} section down the same page) with your current credentials, you can change your credentials and save to restore them.
 % \item Double check the credentials are valid by seeing the message below.
 
 \end{itemize}
 
 \section{Compute Node}
 There are as many as six different types of AWS EC2 compute nodes for you to run your jobs in the cloud: t1.micro, m1.small, m3.medium, m3.large, c3.large, c3.xlarge. These nodes comprise varying combinations of CPU, memory, storage, and networking capacity. Please follow the link to know more about different types of nodes: \url{http://aws.amazon.com/ec2/instance-types/}.
-
-More information regarding how to create an AWS account or a security credential can be found here: \url{http://aws.amazon.com}
+%
+%More information regarding how to create an AWS account or a security credential can be found here: \url{http://aws.amazon.com}
 
 \subsection{An Example on Launching and Shutting Down Nodes}
 Computing node section provides the options of both launching a default node and manually choosing combinations of different nodes at a time. In addition, the status of each launching node can be checked by refreshing the page. Moreover, there is only one click to terminate all running/pending/creating nodes.
@@ -39,13 +40,13 @@ An example will be shown on how to launch and shut down nodes as well as refresh
 \begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.45]{T6/T6_fig_computenode1.png}
-\caption{'Cloud Computing' page - 'Compute nodes' default setting section}
+\caption{Cloud Computing page - Compute nodes default setting section}
 \label{fig:2}
 \end{figure}
 
 \begin{itemize}
 \item Navigate to the main \textbf{Cloud Computing} page.% by \textbf{clicking} the 'Cloud Computing' on the side bar. \textcolor{blue}{Compute nodes} section is right below the \textcolor{blue}{Credentials}
-\item \textit{One compute node at a time} is chosen by default, which means that you could click \textbf{Launch nodes} directly and that will launch one c3.large node for you for the first time (as a head node) and all t1.micro nodes for the rest.
+\item \textit{One compute node at a time} is selected by default, which means that you could click \textbf{Launch nodes} directly and that will launch one c3.large node for you for the first time (as a head node) and all t1.micro nodes for the rest.
 \item By clicking the \textbf{Refresh status} button, you are able to check the status of the launching nodes.
 \item By clicking the \textbf{Terminate all nodes} button, you are able to terminate all nodes of all status. 
 
