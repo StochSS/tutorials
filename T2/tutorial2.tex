@@ -19,10 +19,12 @@ StochSS implements forward sensitivity analysis for the deterministic (ODE-based
 
 In this example we will study the Michaelis-Menten model found in the StochSS Public Library. Details on the model can be found in \cite{wiki-michaelis-menten}.% and instructions on how to import it in Section~\ref{chapter1}. 
 \begin{itemize}
-\item Import the model from the public library. By default, it will be called \texit{michaelis_menten}
-\item Navigate to the \textbf{Simulation Manager}, select the model, and click \text{bf}.
+\item Import the model from the public library. By default, it will be called `michaelis\_menten'.
+\item Navigate to the \textbf{Simulation Manager}, select the model, and click \textbf{Next}.
 \item Under \textbf{Simulation type}, select \textit{Deterministic + Sensitivity}.
-\item You can now select the parameters for which you wish to compute sensitivities. Select $Km$, $k3$, $mu$, and $Vmax$, as .
+\item You can now select the parameters for which you wish to compute sensitivities. Select $Km$, $k3$, $mu$, and $Vmax$, as these are the only parameters that directly affect the values of the species $S$ and $P$.
+\item Click \textbf{Run Locally}. 
+\item Navigate to the \textbf{Job Summary} page to analyze the output. You can plot concentrations as well as sensitivities.
 \end{itemize}
 
 %Figure~\ref{fig:chapter3-sensi} shows a screenshot of the StochSS simulation page. We will perform a sensitivity analysis on the following parameters: \textit{mu, k3, Vmax}, and \textit{Km}. By looking at the reactions of the model (\textbf{Model Editor}$\to$\textbf{Reactions}) it is easy to see that these are the only parameters that directly affect the values of the species \textit{S} and \textit{P}. Also, note that the parameter \textit{k3} directly affects only the dynamics of species \textit{P}.
