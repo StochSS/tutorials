@@ -1,41 +1,31 @@
 \chapter{Cloud Computing with StochSS}
 
 \section{Credentials}
-StochSS provides the option to run different types of jobs using the cloud infrastructures. In StochSS 1.2-1.5, the cloud service utilizes Amazon Web Service (AWS). In order to use AWS Elastic Computing Cloud (EC2), Simple Storage Service (S3) and DynamoDB database, which are all required to run jobs in the cloud, you need an AWS account and credentials (a key pair). 
+StochSS provides the options to run jobs using the Amazon cloud infrastructures. In order to use Amazon Elastic Computing Cloud (EC2), Simple Storage Service (S3) and DynamoDB database, which are all required for running jobs in the cloud, you need an Amazon Web Services (AWS) account and a credential pair (consisting of a secret key and an access key) in hand. 
 
-More information on how to create an AWS account or on how to retrieve your security credentials can be found here: \url{http://aws.amazon.com}
+More information regarding how to create an AWS account and get credential can be found here: \url{http://aws.amazon.com}
 
-\subsection{Setting Credentials}
-%The StochSS will validate the credentials you to run job in the cloud. 
-To run a job in the cloud, StochSS has to validate your credentials.
-%Follow the steps below to let StochSS
-%An example will be shown to you on how to validate your credentials in StochSS through the following steps:
+\subsection{Setting Credentials in StochSS}
+You must set your credentials in StochSS manually (Figure \ref{fig:1}). Once StochSS validates these, you will be able to launch compute nodes and run jobs in the Amazon cloud.
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.45]{T6/T6_fig_credentials.png}
 \caption{Cloud Computing page - Credentials section}
-\label{fig:2}
+\label{fig:1}
 \end{figure}
 
 \begin{itemize}
 \item Navigate to the main \textbf{Cloud Computing} page.
-\item Enter the access key id of your credentials in \textbf{Access Key} text box.
- \item Enter the secret access key of your credentials in the \textbf{Secret Key} text box. 
- \item Click \textbf{Save credentials} to save your credentials into the database. %Whenever there is no compute node running (the nodes can be seen in the \textbf{Status of VMs} section down the same page) with your current credentials, you can change your credentials and save to restore them.
-% \item Double check the credentials are valid by seeing the message below.
-
+\item Enter your access key in \textbf{Access Key} text box.
+\item Enter your secret key in the \textbf{Secret Key} text box. 
+\item Click \textbf{Save credentials} to validate and save your credentials.
 \end{itemize}
 
-\section{Compute Node}
-There are as many as six different types of AWS EC2 compute nodes for you to run your jobs in the cloud: t1.micro, m1.small, m3.medium, m3.large, c3.large, c3.xlarge. These nodes comprise varying combinations of CPU, memory, storage, and networking capacity. Please follow the link to know more about different types of nodes: \url{http://aws.amazon.com/ec2/instance-types/}.
-%
-%More information regarding how to create an AWS account or a security credential can be found here: \url{http://aws.amazon.com}
+\subsection{Launching and Shutting Down Nodes}
+Once valid credentials are entered, clicking \textbf{Launch nodes} (Figure \ref{fig:2}) by default will launch one c3.large Amazon instance. This first node is designated the \textbf{head node}. Any other nodes launched are called \textbf{worker nodes}. There can be zero or more worker nodes, and they are c3.larges instance types by default. For information on Amazon instance types, look here: \url{http://aws.amazon.com/ec2/instance-types/}. The head node must be a c3.large or c3.xlarge. The worker nodes can be any combination of t1.micro, m1.small, m3.medium, m3.large, c3.large, and c3.xlarge nodes (in the \textbf{Advanced settings} menu).
 
-\subsection{An Example on Launching and Shutting Down Nodes}
-Computing node section provides the options of both launching a default node and manually choosing combinations of different nodes at a time. In addition, the status of each launching node can be checked by refreshing the page. Moreover, there is only one click to terminate all running/pending/creating nodes.
-
-An example will be shown on how to launch and shut down nodes as well as refresh the status:
+Only one head node is needed to run jobs in the cloud. It is possible to access cloud data even when no head nodes are launched. Compute resource and storage resources are billed separately by Amazon. More details can be found at: \url{http://aws.amazon.com/ec2/pricing/}.
 
 \begin{figure}[!ht]
 \centering
@@ -44,65 +34,36 @@ An example will be shown on how to launch and shut down nodes as well as refresh
 \label{fig:2}
 \end{figure}
 
-\begin{itemize}
-\item Navigate to the main \textbf{Cloud Computing} page.% by \textbf{clicking} the 'Cloud Computing' on the side bar. \textcolor{blue}{Compute nodes} section is right below the \textcolor{blue}{Credentials}
-\item \textit{One compute node at a time} is selected by default, which means that you could click \textbf{Launch nodes} directly and that will launch one c3.large node for you for the first time (as a head node) and all t1.micro nodes for the rest.
-\item By clicking the \textbf{Refresh status} button, you are able to check the status of the launching nodes.
-\item By clicking the \textbf{Terminate all nodes} button, you are able to terminate all nodes of all status. 
+Launching a node takes time. The \textbf{Refresh status} button can be used to check the launch progress. The \textbf{Terminate all nodes} button terminates all the nodes that StochSS started.
 
-\end{itemize}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[scale=0.45]{T6/T6_fig_computenode2.png}
-\caption{'Cloud Computing' page - 'Compute nodes' advanced setting section}
-\label{fig:2}
-\end{figure}
-
-\begin{itemize}
-\item If you need more options on node types, \textbf{Advanced Settings} will be the right place to take things under control.
-\item Choose one of the \textbf{c3.large} or \textbf{c3.xlarge} if there is no head node running.
-\item Enter more numbers in the text box under the proper types.
-\item Click the \textbf{Launch nodes} button to launch the nodes you have chosen previously.
-\end{itemize}
-
-\section{Reproduction}
-To repeatedly access the output of a cloud job, StochSS provides the flexibility to both store the output in the cloud or reproduce the job every time it's needed (in order for less storage cost). By figuring out which way is the most economic for both time and money cost, you are encouraged to choose the better way of accessing the output.
+\section{Job Reproduction}
+StochSS provides the flexibility to store simulation output in the cloud or delete it and regenerate it later. If simulations are fast but produce large amounts of data, reproducing data only when it is needed can save money.
 
 \subsection{An Example on Job Reproduction}
-An example shown below will guide you on how to reproduce an existing job.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[scale=0.35]{T6/T6_fig_reproduction2.png}
-\caption{Job summary page - reproduction not available}
-\label{fig:2}
-\end{figure}
+Reproducing a cloud job is simple:
 
 \begin{itemize}
-\item Navigate to \textbf{Job Status} page.%, which can be found by clicking \textbf{Job Status} on the side bar.
-\item Click the \textbf{view} link of the job you would like to reproduce to go to the \textbf{Job summary} page.
-\item If cloud output is already there to be viewed (show as \textbf{FIG 4}), you can either click the \textbf{Fetch Data From Cloud} button to view the statistics plot or click \textbf{Delete Optput} to delete output in the cloud. \textbf{Notice that if there is output already stored in the cloud, no reproduction action is available until you delete the output.}
-\item If cloud output is not there, thus \textbf{Output} section being blank, the option to reproduce the job will be displayed (shown as \textbf{FIG 5}).
-\item Choose the right node type for reproduction. If there is no such type running, a warning will show up to guide you to the \textbf{Cloud Computing} page to launch one.
-\item Click the \textbf{Reproduce Results} button to submit the request. Then it will redirect to the \textbf{Job Status} page for job progress viewing.
-
+\item Launch a compute node.
+\item Run a well-mixed or spatial model (everything except Stochoptim can be reproduced).
+\item Navigate to \textbf{Job Status} page.
+\item Click \textbf{view} beside the job you would like to reproduce.
+\item Click \textbf{Delete Optput} to delete output in the cloud. No reproduction action is available until you delete the output.
+\item Once the output is deleted, the option to reproduce the job will be appear as shown in Figure \ref{fig:3}).
+\item Choose a node type for reproduction. If there is no such instance type running, a warning will show up to guide you to the \textbf{Cloud Computing} page to launch one.
+\item Click \textbf{Reproduce Results} to submit the reproduction request. This will automatically redirect to the \textbf{Job Status} page where the new job's status can be monitored.
 \end{itemize}
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.35]{T6/T6_fig_reproduction1.png}
 \caption{Job summary page - reproduction available}
-\label{fig:2}
+\label{fig:3}
 \end{figure}
 
-\newpage
-
 \section{Cost Analysis}
-To choose the right node type for job reproduction later, StochSS provides the possibility to analyze the time and money cost to run the simulation with different types of nodes. The results are plotted for more intuitive comparison and best selection.
+Because different instance types cost different amounts of money, it is not obvious which nodes are the cheapest for any given job type. StochSS allows manual measurement of job cost with the cost-analysis tool.
 
 \subsection{An Example on Job Reproduction}
-An example shown below will guide you on how to analyze the cost of reproducing an existing job.
 
 \begin{figure}[!ht]
 \centering
@@ -112,11 +73,11 @@ An example shown below will guide you on how to analyze the cost of reproducing 
 \end{figure}
 
 \begin{itemize}
-\item Navigate to \textbf{Job Status} page.%, which can be found by clicking \textbf{Job Status} on the side bar.
-\item Click the \textbf{view} link of the job you would like to reproduce to go to the \textbf{Job summary} page.
-\item Click the \textbf{Cost Analysis} button in the \textbf{Reproduction and Cost Analysis} section.
-\item Click the \textbf{Analyze} button with the node type you would like to run and analyze. The page will auto refresh after the request is submitted and show its status of the analysis. If the analysis remaining to be \textbf{active}, click the \textbf{Refresh} button to refresh the status.
-\item If the running is \textbf{finished}, the time and money cost of running the job with the node type you chose will be plotted in the graph below for comparison.
-\item By default, the cost of the job run for the first time will be recorded by cost analysis automatically, so that it doesn't need to rerun for the same instance type.
+\item Run a well-mixed or spatial model.
+\item Navigate to the \textbf{Job Status} page.
+\item Click \textbf{view} beside the job you would like to analyze.
+\item Click \textbf{Cost Analysis} in the \textbf{Reproduction and Cost Analysis} section.
+\item By default, cost analysis should be available for whatever instance type the job was run on.
+\item Click \textbf{Analyze} with any other node type you would like to run and analyze the job on. At least one node of this instance type must already be running.
+\item The run times and costs of simulating the jobs are plotted on the screen.
 \end{itemize}
-
