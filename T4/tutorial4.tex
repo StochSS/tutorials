@@ -1,74 +1,31 @@
 \chapter{Spatial Stochastic Simulations}
 
-%\section{\label{sec:pre}Prerequisites}
-%\begin{itemize}
-%%\item StochSS 1.4 (or later) installed on your computer (please follow download and installation instructions at \url{www.stochss.org}). 
-%%\item A basic understanding of well-mixed discrete stochastic simulations and models based on ordinary differential equations \cite{dan,sundials}.
-%\item A basic knowledge of the mesoscopic reaction-diffusion master equation and of the Next Subvolume Method (NSM) \cite{nsm}.
-%%\item  A basic knowledge of the functionalities in the StochSS GUI (please consult the \textit{Basic Introduction to StochSS} tutorial).
-%%\item The following login screen appears in your browser; please log in.
-%\end{itemize}
-
-%\begin{figure}[!ht]
-%\centering
-%\includegraphics[scale=0.55]{T4/user-login.pdf}
-%\end{figure}
-
-%\newpage
 
 The spatial stochastic simulation capabilities in StochSS are based on PyURDME \cite{urdme}. PyURDME is a general software framework for modeling and simulation of stochastic reaction-diffusion processes on unstructured, tetrahedral (3D) and triangular (2D) meshes. The current core simulation algorithm is based on the mesoscopic reaction-diffusion master equation (RDME) model. The default solver is an efficient implementation of the next subvolume method (NSM) \cite{nsm}.
-%
-%\section{Spatial Stochastic Simulations}
 
 \section{Example: Annihilation of two species in a cylinder}
-We will build a simple model based on an annihilation reaction between two chemical species generated  by sources located at the two opposite bases of an enclosing cylinder.
-%The creation of our new spatial model using the \textbf{Model editor} progresses through the following steps:
+We will build a simple annihilation model based on an cylinder geometry. At each end of the cylinder, different chemicals will be produced. When they diffuse and meet at the center, they will annihilate each other.
 \begin{itemize}
 \item Navigate to the main \textbf{Model editor}.
 \item Add a new model. Select \textit{Population, spatial} in the dropdown menu.
- \item Click \textbf{Mesh} and select \textit{Cylinder}. You will notice that the cylindrical mesh is divided into three subdomains. Species $A$ should be generated in subdomain 1 and species $B$ in subdomain 3.
+ \item Click \textbf{Mesh} and select \textit{Cylinder}. The cylindrical mesh is divided into three subdomains which can be visualized with the controls below the wireframe view.
 \item Add two species, $A$ and $B$, both with diffusion constant 1.
 \item Click \textbf{Initial Condition}, select \textit{scatter}, and add 500 molecules of species $A$ in subdomain 1 and 500 molecules of species $B$ in subdomain 3. 
 \item Add two parameters, $k0$ and $k1$, and set their values to 1 and 100, respectively.
-\item Add three reactions:%, $R1$, $R2$, and $R3$: $\emptyset\overset{k_1}{\rightarrow} A$, $\emptyset\overset{k_1}{\rightarrow} B$, and $A+B\overset{k_0}{\rightarrow}\emptyset$.
+\item Add three reactions:
 \begin{align*}
 \textrm{R1}:&\quad \emptyset\overset{k_1}{\rightarrow} A\\
 \textrm{R2}:&\quad \emptyset\overset{k_1}{\rightarrow} B\\
 \textrm{R3}:&\quad A+B\overset{k_0}{\rightarrow}\emptyset
 \end{align*}
 \item Reaction $R1$ should be restricted to subdomain 1 and reaction $R2$ to subdomain 3. Reaction $R3$ should be allowed throughout the whole domain.
-% \item Click on the \textcolor{blue}{`Species'} tag to define chemical species names and their diffusion coefficient. 
-% \item Use the \textcolor{blue}{`Add species'} button on the right to add \textit{A} and \textit{B} species both with diffusion coefficient $D=1$.
-% \item Click on the \textcolor{blue}{`Parameters'} tag to define model parameters names and their expressions. 
-% \item Use the \textcolor{blue}{`Add parameter'} button to add parameter \textit{k1} with a value of $100$.
-% \item Click on the \textcolor{blue}{`Reactions'} tag to define reaction names, reactants, products and propensities.
-% \item Use the \textcolor{blue}{`Add reaction'} button to add reactions \textit{R1, R2, R3} (see Fig.~\ref{fig:2}). To insert reactions R1 and R2 (`birth' reactions) leave the `Reactants' text box empty and type in the name of the generated species in the `Products' text box.
-% To define R3 (the annihilation reaction), enter the species names separated by a comma in the 
-%`Reactants' text box. Leave the `Products' text box empty. Check out the on-screen help buttons.
-
- 
- %Select the proper buttons in sections 3 and 4 on the Mesh page. Keep in mind that species A is generated in subdomain 1, whereas species B is generated in subdomain 3. Both species are allowed to diffuse everywhere within the cylinder (in all three subdomains). In other words, reaction R1 should be limited to subdomain 1 and reaction R2 to subdomain 3. Reaction R3 can happen in all three subdomains.
- %\item \textbf{Click} on the \textcolor{blue}{`Add Initial Condition'} button and \textcolor{blue}{`Select'} `Scatter`, `A`, `Subdomain = 1`,`Count = 500`. \textbf{Click} ', `B`, `Subdomain = 3',`Count = 500'. \textbf{Click} on the \textcolor{blue}{`Add Initial Condition'} button.
 \item The model is now complete and ready to be simulated.
-
 \item Navigate to the \textbf{Simulation manager} page.
-
 \item Select the spatial model you just created and click \textbf{Next}.
 \item Setup the simulation parameters: name, time, data storage frequency, and number of realizations. 
 \item You can specify a random seed for the random number generator under \textbf{Advanced Settings}.
-%\item To define the initial random seed, select \textbf{Advanced Settings}.
 \item Click \textbf{Run locally}.
 \item In a few seconds you will be directed to the \textbf{Job Status} page where you can check the status of your simulation.
 \item Once your simulation is complete, click \textbf{View results} to open the \textbf{Job summary} page, where you can visualize the diffusion of the two species over time within the cylindrical container and download the output files of the simulation.
 
 \end{itemize}
-
-%\begin{figure}[!ht]
-%\centering
-%\includegraphics[scale=0.64]{T4/reactions-spatial.pdf}
-%\caption{`Reactions' page}
-%\label{fig:2}
-%\end{figure}
-
-%\newpage
-
