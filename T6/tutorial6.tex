@@ -1,9 +1,9 @@
-\chapter{Cloud Computing with StochSS}
+\chapter{Cloud Computing}
 
 \section{Credentials}
 StochSS provides the options to run jobs using the Amazon cloud infrastructures. In order to use Amazon Elastic Computing Cloud (EC2), Simple Storage Service (S3) and DynamoDB database, which are all required for running jobs in the cloud, you need an Amazon Web Services (AWS) account and a credential pair (consisting of a secret key and an access key) in hand. 
 
-More information regarding how to create an AWS account and get credential can be found here: \url{http://aws.amazon.com}
+More information regarding how to create an AWS account and get credentials can be found here: \url{http://aws.amazon.com}
 
 \subsection{Setting Credentials in StochSS}
 You must set your credentials in StochSS manually (Figure \ref{fig:1}). Once StochSS validates these, you will be able to launch compute nodes and run jobs in the Amazon cloud.
@@ -17,15 +17,15 @@ You must set your credentials in StochSS manually (Figure \ref{fig:1}). Once Sto
 
 \begin{itemize}
 \item Navigate to the main \textbf{Cloud Computing} page.
-\item Enter your access key in \textbf{Access Key} text box.
-\item Enter your secret key in the \textbf{Secret Key} text box. 
+\item Type your access key in \textbf{Access Key} text box.
+\item Type your secret key in the \textbf{Secret Key} text box. 
 \item Click \textbf{Save credentials} to validate and save your credentials.
 \end{itemize}
 
 \subsection{Launching and Shutting Down Nodes}
 Once valid credentials are entered, clicking \textbf{Launch nodes} (Figure \ref{fig:2}) by default will launch one c3.large Amazon instance. This first node is designated the \textbf{head node}. Any other nodes launched are called \textbf{worker nodes}. There can be zero or more worker nodes, and they are c3.larges instance types by default. For information on Amazon instance types, look here: \url{http://aws.amazon.com/ec2/instance-types/}. The head node must be a c3.large or c3.xlarge. The worker nodes can be any combination of t1.micro, m1.small, m3.medium, m3.large, c3.large, and c3.xlarge nodes (in the \textbf{Advanced settings} menu).
 
-Only one head node is needed to run jobs in the cloud. It is possible to access cloud data even when no head nodes are launched. Compute resource and storage resources are billed separately by Amazon. More details can be found at: \url{http://aws.amazon.com/ec2/pricing/}.
+Only one head node is needed to run jobs in the cloud. It is possible to access cloud data even when no head nodes are launched. Compute resources and storage resources are billed separately by Amazon. More details can be found at: \url{http://aws.amazon.com/ec2/pricing/}.
 
 \begin{figure}[!ht]
 \centering
@@ -44,11 +44,11 @@ Reproducing a cloud job is simple:
 
 \begin{itemize}
 \item Launch a compute node.
-\item Run a well-mixed or spatial model (everything except Stochoptim can be reproduced).
-\item Navigate to \textbf{Job Status} page.
+\item Run a well-mixed or spatial model (everything except StochOptim can be reproduced).
+\item Navigate to the \textbf{Job Status} page.
 \item Click \textbf{view} beside the job you would like to reproduce.
-\item Click \textbf{Delete Optput} to delete output in the cloud. No reproduction action is available until you delete the output.
-\item Once the output is deleted, the option to reproduce the job will be appear as shown in Figure \ref{fig:3}).
+\item Click \textbf{Delete Output} to delete output in the cloud. No reproduction action is available until you delete the output.
+\item Once the output is deleted, the option to reproduce the job will be appear as shown in Figure \ref{fig:3}.
 \item Choose a node type for reproduction. If there is no such instance type running, a warning will show up to guide you to the \textbf{Cloud Computing} page to launch one.
 \item Click \textbf{Reproduce Results} to submit the reproduction request. This will automatically redirect to the \textbf{Job Status} page where the new job's status can be monitored.
 \end{itemize}

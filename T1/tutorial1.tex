@@ -1,4 +1,4 @@
-\chapter{Basic Introduction to StochSS}
+\chapter{Basic Introduction}
 \label{chapter1}
 This tutorial will guide you through the basic features of StochSS. You will become familiar with the \textbf{Model Editor} and the \textbf{Simulation Manager}. You will learn how to create your own model, which can be population or concentration-based, and how to simulate it using either an ordinary differential equation (ODE) solver or the stochastic simulation algorithm (SSA).
 
@@ -31,16 +31,16 @@ The best way to get started with the model editor is to import an example model 
 
 \underline{Option 1: StochSS Public Library}
 \begin{itemize}
-  \item Navigate to the main \textbf{Model Editor} page.
+  \item Navigate to the \textbf{Model Editor} page.
   \item Click \textbf{Import from Public Library} in the right-hand toolbar.
   \item Select a model from the Public Library and click \textbf{Copy Model to Library}.
 \end{itemize}
 
 \noindent\underline{Option 2: Stochkit2 .XML}
 \begin{itemize}
-  \item Navigate to the main \textbf{Model Editor} page.
+  \item Navigate to the \textbf{Model Editor} page.
   \item Click \textbf{Import from .XML} in the right-hand toolbar.
-  \item Select an XML file. A collection of example models can be found in the \textbf{examples} directory within the StochSS install folder.
+  \item Select an XML file. A collection of example models can be found in the \textit{examples} directory within the StochSS install folder.
   \item Click \textbf{Import}.
 \end{itemize}
 
@@ -50,10 +50,13 @@ By clicking \textbf{Export to .zip} or \textbf{Export to Public Library} the mod
 
 \section{Creating a New Model}
 An example population model is defined by the following two reactions:
-\[ \begin{cases}
-S0 + S0 \xlongrightarrow{k1} S1 \nonumber \\
-S1 \xrightarrow{k0} \emptyset . \nonumber 
-\end{cases} \]
+\begin{equation}
+\label{eq:tut1-reac1}
+\begin{aligned}
+S0 + S0 &\xrightarrow{k1} S1\\
+S1 &\xrightarrow{k0} \emptyset .  
+\end{aligned}
+\end{equation}
 
 To create this model:
 \begin{itemize}
@@ -64,7 +67,7 @@ To create this model:
   \item By default the species are named $S0$ and $S1$. Set the initial condition for $S0$ to $1000$ and the initial condition for $S1$ to $0$.
   \item Similarly to above, click \textbf{Add Parameter} twice to add two parameters.
   \item By default they will be named $k0$ and $k1$. Set $k0$ to $0.0001$ and $k1$ to $0.05$.
-  \item Click \textbf{Add Reaction} to add two reactions. Select the reactants, products, rates and reaction types corresponding to the equations above. Compare to Figures \ref{fig:reaction2} and \ref{fig:reaction1} to verify the settings.
+  \item Click \textbf{Add Reaction} to add two reactions. Select the reactants, products, rates and reaction types corresponding to \eqref{eq:tut1-reac1}. Compare to Figures \ref{fig:reaction2} and \ref{fig:reaction1} to verify the settings.
 \end{itemize}
 
 \begin{figure}[!htb]
@@ -100,13 +103,17 @@ For this section, create or import a model using the directions above.
 \end{itemize}
 
 \subsection{Converting a concentration model to population}
-Create a concentration model or use the directions above to import one. Both Lotka-Volterra examples are concentration based and are available both as .XMLs and Public Library models.
+Create a concentration model or use the directions above to import one. Both Lotka-Volterra examples are concentration based and are available both as XML files and Public Library models.
 
 \begin{itemize}
   \item Select the newly minted concentration model.
   \item Click \textbf{Convert to Population} on the right-hand toolbar to start the conversion process. The model conversion page will open.
   \item To convert a concentration model to a population, a system volume must be specified.
-  \item Given a volume, StochSS will convert the species initial conditions (through $initial\_condition\_population = initial\_condition\_concentration * volume$) and attempt to convert the reaction rates. It is not always possible to convert reaction rates automatically. In the case automatic conversion fails, the conversion can still proceed but the user is expected to correct the reactions that could not be automatically converted.
+  \item Given a volume, StochSS converts initial conditions through 
+  \begin{align}
+  \mathrm{initial\_condition\_population} = \mathrm{initial\_condition\_concentration}\times\mathrm{volume}
+  \end{align}
+   and attempts to convert the reaction rates. It is not always possible to convert reaction rates automatically. If automatic conversion fails the conversion still proceeds, but the user now has to correct the reactions that were not automatically converted.
   \item Click \textbf{Finish conversion} at the bottom left of the page to create a population-based model. This newly created population model can be simulated using both deterministic and stochastic solvers.
   \item Click \textbf{Cancel conversion} to cancel the conversion.
 \end{itemize}
@@ -114,21 +121,21 @@ Create a concentration model or use the directions above to import one. Both Lot
 \warning{The conversion process operates correctly only if the model to be converted is entirely based on the mass action kinetics allowed in Gillespie Stochastic Simulation Algorithm \cite{dan}. If the model to be converted is not entirely based on mass action kinetics, the conversion tool only converts what it can. }
 
 \section{Backup and Transfer your Data}
-You can backup or share your saved models and simulations with the StochSS .zip format. There are three ways to create StochSS .zips:
+You can backup or share your saved models and simulations with the StochSS ZIP format. There are three ways to create StochSS ZIP files:
 
 \begin{itemize}
-\item Navigate to the \textbf{Backup} page in the left-hand toolbar and click \textbf{Export}. This exports a .zip containing all models and simulation results for the current user. There is an option to export all data for all users if this page is accessed with the admin account.
+\item Navigate to the \textbf{Backup} page in the left-hand toolbar and click \textbf{Export}. This exports a ZIP containing all models and simulation results for the current user. There is an option to export all data for all users if this page is accessed with the admin account.
 \item Select a model on the \textbf{Model Editor} page and click \textbf{Export to .zip}.
 \item Click \textbf{View} on the \textbf{Job Status} page, and then click \textbf{Access local data}.
 \end{itemize}
 
-These .zip files can all be imported into StochSS on the \textbf{Backup} page. To import the contents of a .zip file into StochSS:
+These ZIP files can all be imported into StochSS on the \textbf{Backup} page. To import the contents of a ZIP file into StochSS:
 
 \begin{itemize}
 \item Navigate to the \textbf{Backup} page.
 \item Click \textbf{Import}.
-\item Select the .zip file to upload. The file should automatically begin uploading, and then appear in a table of .zip archives below.
-\item Select the .zip file in the table.
+\item Select the ZIP file to upload. The file should automatically begin uploading, and then appear in a table of ZIP archives below.
+\item Select the ZIP file in the table.
 \item Define the behavior of the import by either limiting what files get imported or specifying how overlapping names are handled.
 \item Click \textbf{Import} at the bottom of the page.
 \end{itemize}
