@@ -7,7 +7,7 @@ MCEM$^2$ computes maximum likelihood parameter estimates (MLEs) and associated u
 \section{Example: Estimate parameters of a birth-death model}
 We consider the Birth-Death model that can be imported from the StochSS Public Library (see Section~\ref{chapter1} for instructions on how to import models in StochSS).
 After the model has been imported:
-\begin{itemize}
+\begin{enumerate}
 \item Select \textbf{Parameter estimation} from the menu on the left of the screen.
 \item Select the \textit{birthdeath} model and click \textbf{Next}. This will open the \textbf{Simulation page}.
 \item Example files (StochOptim input data) for the initial conditions and the trajectories are provided in the \textit{examples} folder (included in your StochSS package) and are named \textit{birthDeathInitial.txt} and \textit{birthDeathTrajectories.txt}, respectively.
@@ -18,7 +18,7 @@ After the model has been imported:
 \item Click \textbf{View Progress} to access the \textbf{Job Summary} page and to view more details about status of your job. Parameter estimation calculations using MCEM$^2$ are typically time consuming computations. This simple example takes a little less than $20$ minutes on a desktop Intel i7 computer. A more realistic job will take much longer to run.
 \item When the job has finished, you can generate a new model using the final estimates of the MCEM$^2$ calculation by scrolling to the bottom of the \textbf{Job Summary} page and click \textbf{Create Model from Current Estimates}.
 \item If the job doesn't complete in a reasonable amount of time the job can be stopped manually on the \textbf{Job Status} page and the parameters can be extracted by clicking \textbf{Create Model from Current Estimates}.
-\end{itemize}
+\end{enumerate}
 
 \subsection{StochOptim input file format}
 The StochOptim input data format consists of two tab-separated text files.
