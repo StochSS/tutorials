@@ -4,7 +4,7 @@ This tutorial will guide you through the basic features of StochSS. You will bec
 
 \section{\label{sec:acc} Creating Administrator and Standard User Accounts}
 At the end of a successful installation process, your default browser will launch and you will be asked to create an admin account as in Figure \ref{fig:admin} (there is only one admin account for the entire system).
-Once the admin account is created you will be forwarded to a regular login page where you can log in to a StochSS server.
+Once the admin account is created you will be forwarded to a regular login page where you can log in to StochSS.
 
 \begin{figure}[!htb]
 \centering
@@ -32,20 +32,20 @@ The best way to get started with the model editor is to import an example model 
 \underline{Option 1: StochSS Public Library}
 \begin{itemize}
   \item Navigate to the main \textbf{Model Editor} page.
-  \item Click the \textbf{Import from Public Library} link in the right-hand toolbar.
+  \item Click \textbf{Import from Public Library} in the right-hand toolbar.
   \item Select a model from the Public Library and click \textbf{Copy Model to Library}.
 \end{itemize}
 
 \noindent\underline{Option 2: Stochkit2 .XML}
 \begin{itemize}
   \item Navigate to the main \textbf{Model Editor} page.
-  \item Click the \textbf{Import from .XML} link in the right-hand toolbar.
+  \item Click \textbf{Import from .XML} in the right-hand toolbar.
   \item Select an XML file. A collection of example models can be found in the \textbf{examples} directory within the StochSS install folder.
-  \item Click on the \textbf{Import} button.
+  \item Click \textbf{Import}.
 \end{itemize}
 
 After importing the XML file or public model, StochSS should display the imported model in the model editor.
-Take a look through the page at how the different \textbf{Species}, \textbf{Parameters}, and \textbf{Reactions} are defined.
+Look through the page to see how the different \textbf{Species}, \textbf{Parameters}, and \textbf{Reactions} are defined.
 By clicking \textbf{Export to .zip} or \textbf{Export to Public Library} the model can be shared across computers or shared amongst users of the same StochSS.
 
 \section{Creating a New Model}
@@ -59,12 +59,12 @@ To create this model:
 \begin{itemize}
   \item Navigate to the \textbf{Model Editor}.
   \item Click \textbf{Add Model} and select \textit{Population, Well-mixed}.
-  \item Rename the model \textbf{example}.
-  \item Click the \textbf{Create Species} button twice to create two species.
-  \item By default the species are named \textbf{S0} and \textbf{S1}. Set the initial condition for \textbf{S0} to \textbf{1000} and the initial condition for \textbf{S1} to \textbf{0}.
+  \item Rename the model to \textit{example}.
+  \item Click \textbf{Create Species} twice to create two species.
+  \item By default the species are named $S0$ and $S1$. Set the initial condition for $S0$ to $1000$ and the initial condition for $S1$ to $0$.
   \item Similarly to above, click \textbf{Add Parameter} twice to add two parameters.
   \item By default they will be named $k0$ and $k1$. Set $k0$ to $0.0001$ and $k1$ to $0.05$.
-  \item Use the \textbf{Add Reaction} button to add the two reactions above. Select the reactants, products, rates and reaction types corresponding to the equations above. Use Figure \ref{fig:reaction1} and \ref{fig:reaction2} to verify the settings.
+  \item Click \textbf{Add Reaction} to add two reactions. Select the reactants, products, rates and reaction types corresponding to the equations above. Compare to Figures \ref{fig:reaction2} and \ref{fig:reaction1} to verify the settings.
 \end{itemize}
 
 \begin{figure}[!htb]
@@ -87,16 +87,16 @@ For this section, create or import a model using the directions above.
 
 \begin{itemize}
   \item Navigate to the \textbf{Simulation Manager} page.
-  \item Select the model you wish to simulate and click on the \textbf{Next} button.
+  \item Select the model you wish to simulate and click \textbf{Next}.
   \item Setup your simulation parameters: name, time, data storage frequency, realizations and solver type. 
   \begin{itemize}
     \item If you are simulating a population-based model you can choose between the deterministic and the stochastic solvers.
     %\item If you choose the deterministic solver, you have the possibility to perform sensitivity analysis on a set of chosen parameters related to your model.
     \item Concentration-based models can only be simulated using the deterministic solver.
   \end{itemize}  
-  \item Click on the \textbf{Run Locally} button. When the job runs, StochSS should automatically transition to the \textbf{Job Status} page.
-  \item Click the \textbf{View} link beside the recently run job to open the \textbf{Job summary} page to visualize the simulation's trajectories.
-  \item Click the \textbf{Access Local Data} button to download a raw copy of the data. This can be used to share data between StochSS installations or perform manual data analysis.
+  \item Click \textbf{Run Locally}. You will be automatically forwarded to the \textbf{Job Status} page.%When the job runs, StochSS should automatically transition to the \textbf{Job Status} page.
+  \item Click \textbf{View} to open the \textbf{Job summary} page, where you can visualize the simulation's trajectories.
+  \item Click \textbf{Access Local Data} to download a raw copy of the data. This can be used to share data between StochSS installations or perform manual data analysis.
 \end{itemize}
 
 \subsection{Converting a concentration model to population}
@@ -104,10 +104,10 @@ Create a concentration model or use the directions above to import one. Both Lot
 
 \begin{itemize}
   \item Select the newly minted concentration model.
-  \item Click on \textbf{Convert to Population} item on the right-hand toolbar to start the conversion process. The model conversion page will open.
+  \item Click \textbf{Convert to Population} on the right-hand toolbar to start the conversion process. The model conversion page will open.
   \item To convert a concentration model to a population, a system volume must be specified.
-  \item Given a volume, StochSS will convert the species initial conditions (simply $initial\_condition\_population = initial\_condition\_concentration * volume$) and attempt to convert the reaction rates. It is not always possible to convert reaction rates automatically. In the case automatic conversion fails, the conversion can still proceed but the user is expected to fix whichever reaction could not be converted automatically.
-  \item Click the \textbf{Finish conversion} button at the bottom left of the page to create a population-based model. This newly created population model can be simulated using both deterministic and stochastic solvers.
+  \item Given a volume, StochSS will convert the species initial conditions (through $initial\_condition\_population = initial\_condition\_concentration * volume$) and attempt to convert the reaction rates. It is not always possible to convert reaction rates automatically. In the case automatic conversion fails, the conversion can still proceed but the user is expected to correct the reactions that could not be automatically converted.
+  \item Click \textbf{Finish conversion} at the bottom left of the page to create a population-based model. This newly created population model can be simulated using both deterministic and stochastic solvers.
   \item Click \textbf{Cancel conversion} to cancel the conversion.
 \end{itemize}
 
@@ -118,19 +118,19 @@ You can backup or share your saved models and simulations with the StochSS .zip 
 
 \begin{itemize}
 \item Navigate to the \textbf{Backup} page in the left-hand toolbar and click \textbf{Export}. This exports a .zip containing all models and simulation results for the current user. There is an option to export all data for all users if this page is accessed with the admin account.
-\item Select a model in the \textbf{Model Editor} page and click \textbf{Export to .zip}.
-\item Click the \textbf{View} link in the \textbf{Job Status} page, and then click \textbf{Access local data}.
+\item Select a model on the \textbf{Model Editor} page and click \textbf{Export to .zip}.
+\item Click \textbf{View} on the \textbf{Job Status} page, and then click \textbf{Access local data}.
 \end{itemize}
 
-These .zip files can all be imported into StochSS in the \textbf{Backup} page. To import the contents of a .zip file into StochSS:
+These .zip files can all be imported into StochSS on the \textbf{Backup} page. To import the contents of a .zip file into StochSS:
 
 \begin{itemize}
 \item Navigate to the \textbf{Backup} page.
-\item Click the \textbf{Import} tab.
+\item Click \textbf{Import}.
 \item Select the .zip file to upload. The file should automatically begin uploading, and then appear in a table of .zip archives below.
 \item Select the .zip file in the table.
 \item Define the behavior of the import by either limiting what files get imported or specifying how overlapping names are handled.
-\item Click the \textbf{Import} button at the bottom of the page.
+\item Click \textbf{Import} at the bottom of the page.
 \end{itemize}
 
 \subsection{Exporting data from an old version of StochSS (1.2 or previous)}

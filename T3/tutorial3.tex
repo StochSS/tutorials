@@ -16,22 +16,22 @@
 StochSS implements parameter estimation for stochastic biochemical systems (StochOptim) via the Monte Carlo expectation-maximization with Modified Cross-Entropy method (MCEM$^2$) \cite{bernie}.
 MCEM$^2$ computes maximum likelihood parameter estimates (MLEs) and associated uncertainties in three consecutive phases: cross-entropy, Monte Carlo expectation-maximization (MCEM), and uncertainty quantification \cite{bernie}.
 
-\section{StochOptim: Parameter Estimation for Stochastic Biochemical Systems}
+%\section{StochOptim: Parameter Estimation for Stochastic Biochemical Systems}
 
-\subsection{An Instructive Example}
+\section{Example: Estimate parameters of a birth-death model}
 We consider the Birth-Death model that can be imported from the StochSS Public Library (see Section~\ref{chapter1} for instructions on how to import models in StochSS).
 After the model has been imported:
 \begin{itemize}
 \item Select \textbf{Parameter estimation} from the menu on the left of the screen.
-\item Click \textbf{Next} (make sure that the right model is selected). This will open the \textbf{Simulation page}.
-\item On the Simulation page, select only parameter $k1$. In this example the default value of $k2$ is already optimized (0.03 is the correct value for the example trajectory data). This is done to make the convergence process faster. Upload the data files that will be used for the parameter estimation.
+\item Select the model and click \textbf{Next}. This will open the \textbf{Simulation page}.
+\item On the Simulation page, select only parameter $k1$. In this example the default value of $k2$ is already optimized (0.03 is the correct value for the example trajectory data). This is to make the convergence process faster. %Upload the data files that will be used for the parameter estimation.
 \item Example files (StochOptim input data) for the initial conditions and the trajectories are provided in the \textit{examples} folder (included in your StochSS package) and are named \textit{birthDeathInitial.txt} and \textit{birthDeathTrajectories.txt}, respectively.
-\item Click \textbf{Run Locally} at the bottom of the page to start the parameter estimation.
+\item Click \textbf{Run Locally} to start the parameter estimation.
 \item Select \textbf{Job Status} from the menu on the left of the screen to monitor the status of your submitted job.
-Click \textbf{View Progress} to access the \textbf{Job Summary} page and to view more details about your job's status. Parameter estimation calculations using MCEM$^2$ are typically time consuming computations. For this simple example, the parameter estimation process took about $9-10$ minutes on a Macbook Pro (Intel Core i7 - 2011). By selecting both k1 and k2 parameters the parameter estimation process took about $90$ minutes on the same machine.
+Click \textbf{View Progress} to access the \textbf{Job Summary} page and to view more details about status of your job. Parameter estimation calculations using MCEM$^2$ are typically time consuming computations. For this simple example, the parameter estimation process took about $9-10$ minutes on a Macbook Pro (Intel Core i7 - 2011). By selecting both $k1$ and $k2$ the parameter estimation process took about $90$ minutes on the same machine.
 
-\item When the job has finished, you can generate a new model using the final estimates of the MCEM$^2$ calculation as follows: scroll to the bottom of the \textbf{Job Summary} page and select \textbf{Create Model from Current Estimates}. 
-\item If the job doesn't complete in a reasonable amount of time the job can be stopped manually on the \textbf{Job Status} page and the parameters can be extracted using the \textbf{Create Model from Current Estimates} button.
+\item When the job has finished, you can generate a new model using the final estimates of the MCEM$^2$ calculation as follows: scroll to the bottom of the \textbf{Job Summary} page and click \textbf{Create Model from Current Estimates}. 
+\item If the job doesn't complete in a reasonable amount of time the job can be stopped manually on the \textbf{Job Status} page and the parameters can be extracted by clicking \textbf{Create Model from Current Estimates}.
 \end{itemize}
 
 \subsection{StochOptim input file format}

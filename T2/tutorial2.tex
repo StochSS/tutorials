@@ -17,9 +17,9 @@ StochSS implements forward sensitivity analysis for the deterministic (ODE-based
 
 \section{Example: Michaelis-Menten}
 
-In this example we will study the Michaelis-Menten model found in the StochSS Public Library. Details on the model can be found in \cite{wiki-michaelis-menten}.% and instructions on how to import it in Section~\ref{chapter1}. 
+In this example we will study the Michaelis-Menten model from the StochSS Public Library. Details on the model can be found in \cite{wiki-michaelis-menten}.% and instructions on how to import it in Section~\ref{chapter1}. 
 \begin{itemize}
-\item Import the model from the public library. By default, it will be called `michaelis\_menten'.
+\item Import the model from the public library. By default, it will be called \textit{michaelis\_menten}.
 \item Navigate to the \textbf{Simulation Manager}, select the model, and click \textbf{Next}.
 \item Under \textbf{Simulation type}, select \textit{Deterministic + Sensitivity}.
 \item You can now select the parameters for which you wish to compute sensitivities. Select $Km$, $k3$, $mu$, and $Vmax$, as these are the only parameters that directly affect the values of the species $S$ and $P$.
@@ -40,20 +40,20 @@ In this example we will study the Michaelis-Menten model found in the StochSS Pu
 
 \subsection{Scaling in sensitivity analysis}
 \label{sec:scaling_expl}
-Let's consider the population of \textit{P} and the parameter \textit{Vmax} in our Michaelis-Menten model. The sensitivity of the rate of the increase in population \textit{P} to the parameter \textit{Vmax} is defined as the incremental rate of change in \textit{P} due to incremental changes in \textit{Vmax}:
+Let's consider the population of $P$ and the parameter $Vmax$ in our Michaelis-Menten model. The sensitivity of the rate of the increase in population $P$ to the parameter $Vmax$ is defined as the incremental rate of change in $P$ due to incremental changes in $Vmax$:
 
 \begin{equation}
 \frac{\partial P(t)}{\partial V_{max}}.
 \end{equation}
 
-The analysis of the relative importance of various parameters in determining the dynamic behavior of a population can be negatively affected by the presence of different scales in the parameter set. Hence, for the purpose of comparison, it is preferable to consider scaled \textbf{sensitivities} (also called \textbf{elasticities}). The elasticity for species \textit{P} with respect to parameter \textit{Vmax} is defined as:
+The analysis of the relative importance of various parameters in determining the dynamic behavior of a population can be negatively affected by the presence of different scales in the parameter set. Hence, for the purpose of comparison, it is preferable to consider scaled sensitivities (also called elasticities). The elasticity for species $P$ with respect to parameter $Vmax$ is defined as:
 
 \begin{equation}
 \frac{\partial P(t)}{\partial V_{max}} \cdot \frac{V_{max}}{P(t)} = \frac{\partial \log(P(t))}{\partial\log(V_{max})}.
 \end{equation}
 
-Using elasticities for parameter comparison is certainly an improvement with respect to the use of unscaled sensitivities. However, it is worth remembering that the use of elasticity may lead to artifacts \cite{scale}. After all, elasticity is just one possible transformation that can be applied to the sensitivities. An interesting discussion about sensitivity transformations in ecology is given in Ref.~\cite{scale}. \\
-Among many possible transformation/scaling techniques, we would like to mention the \textbf{dimensionless scaled sensitivity} defined as \cite{calib}:
+Using elasticities for parameter comparison is an improvement over the use of unscaled sensitivities. However, it is worth remembering that the use of elasticity may lead to artifacts \cite{scale}. After all, elasticity is just one possible transformation that can be applied to the sensitivities. An interesting discussion about sensitivity transformations in ecology is given in \cite{scale}. \\
+Among many possible transformation/scaling techniques, we would like to mention the dimensionless scaled sensitivity defined as \cite{calib}:
 
 \begin{equation}
 dss(t, V_{max}) = \frac{\partial P(t)}{\partial V_{max}} \cdot V_{max},
