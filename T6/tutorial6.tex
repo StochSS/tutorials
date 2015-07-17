@@ -15,12 +15,12 @@ You must set your credentials in StochSS manually (Figure \ref{fig:1}). Once Sto
 \label{fig:1}
 \end{figure}
 
-\begin{itemize}
+\begin{enumerate}
 \item Navigate to the main \textbf{Cloud Computing} page.
 \item Copy your access key to the \textbf{Access Key} text box.
 \item Copy your secret key to the \textbf{Secret Key} text box. 
 \item Click \textbf{Save credentials} to validate and save your credentials.
-\end{itemize}
+\end{enumerate}
 
 \subsection{Launching and Shutting Down Nodes}
 Once valid credentials are entered, clicking \textbf{Launch nodes} (Figure \ref{fig:2}) by default will launch one c3.large Amazon instance. This first node is designated the \textbf{head node}. Any other nodes launched are called \textbf{worker nodes}. There can be zero or more worker nodes, and they are c3.larges instance types by default. For information on Amazon instance types, look here: \url{http://aws.amazon.com/ec2/instance-types/}. The head node must be a c3.large or c3.xlarge. The worker nodes can be any combination of t1.micro, m1.small, m3.medium, m3.large, c3.large, and c3.xlarge nodes (chosen in the \textbf{Advanced settings} menu).
@@ -42,7 +42,7 @@ StochSS provides the flexibility to store simulation output in the cloud or dele
 \subsection{An Example on Job Reproduction}
 Reproducing a cloud job is simple:
 
-\begin{itemize}
+\begin{enumerate}
 \item Launch a compute node.
 \item Run a well-mixed or spatial model (everything except parameter estimation jobs can be reproduced).
 \item Navigate to the \textbf{Job Status} page.
@@ -51,7 +51,7 @@ Reproducing a cloud job is simple:
 \item Once the output is deleted, the option to reproduce the job will be appear as shown in Figure \ref{fig:3}.
 \item Choose a node type for reproduction. If there is no such instance type running, a warning will show up to guide you to the \textbf{Cloud Computing} page to launch one.
 \item Click \textbf{Reproduce Results} to submit the reproduction request. This will automatically redirect to the \textbf{Job Status} page where the new job's status can be monitored.
-\end{itemize}
+\end{enumerate}
 
 \begin{figure}[!ht]
 \centering
@@ -72,7 +72,7 @@ Because different instance types cost different amounts of money, it is not obvi
 \label{fig:cost-analysis}
 \end{figure}
 
-\begin{itemize}
+\begin{enumerate}
 \item Run a well-mixed or spatial model.
 \item Navigate to the \textbf{Job Status} page.
 \item Click \textbf{view} beside the job you would like to analyze.
@@ -80,4 +80,4 @@ Because different instance types cost different amounts of money, it is not obvi
 \item By default, cost analysis should be available for whatever instance type the job was run on.
 \item Click \textbf{Analyze} with any other node type you would like to run and analyze the job on. At least one node of this instance type must already be running.
 \item The run times and costs of simulating the jobs are plotted on the screen as in Figure \ref{fig:cost-analysis}.
-\end{itemize}
+\end{enumerate}
