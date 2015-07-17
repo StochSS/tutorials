@@ -42,7 +42,7 @@ StochSS 1.6 introduces Flex Cloud, an abstraction which allows you to run StochS
 \item Next, in the first row of the \textbf{Flex Cloud Machine Info} table, type the IP address and username, and select the appropriate key pair for the compute node that should act as the queue head. The Flex Queue Head will act as a coordinate for StochSS jobs, as well as store all output for jobs run in the cloud. This machine should be fairly robust; for EC2 instances a c3.large would be appropriate.
 \item Click \textbf{+} to add more compute nodes. %For each of them, type the IP address, username, and enter the key info as above.
 \item Click \textbf{Deploy} to start the Flex Cloud service.
-\item The compute nodes may take a few minutes to launch. Refresh the page occasionally and wait until all nodes enter the \emph{running} state as shown in the \textbf{Flex Cloud Machine Info} table.
+\item The compute nodes may take a few minutes to launch. Refresh the page occasionally and wait until all nodes enter the \emph{Running} state as shown in the \textbf{Flex Cloud Machine Info} table.
 
 \item Once Flex Cloud has been successfully configured, StochSS will run jobs in Flex Cloud when you click \textbf{Run via Cloud} as long as Flex Cloud has been successfully configured and the Flex Queue Head node is up and running.
 
