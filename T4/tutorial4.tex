@@ -1,0 +1,31 @@
+\chapter{Spatial Stochastic Simulations}
+
+
+The spatial stochastic simulation capabilities in StochSS are based on PyURDME \cite{urdme}. PyURDME is a general software framework for modeling and simulation of stochastic reaction-diffusion processes on unstructured, tetrahedral (3D) and triangular (2D) meshes. The current core simulation algorithm is based on the mesoscopic reaction-diffusion master equation (RDME) model. The default solver is an efficient implementation of the next subvolume method (NSM) \cite{nsm}.
+
+\section{Example: Annihilation of two species in a cylinder}
+We will build a simple annihilation model based on an cylinder geometry. At each end of the cylinder, different chemicals will be produced. When they diffuse and meet at the center, they will annihilate each other.
+\begin{enumerate}
+\item Navigate to the main \textbf{Model editor}.
+\item Add a new model. Select \textit{Population, spatial} in the dropdown menu.
+ \item Click \textbf{Mesh} and select \textit{Cylinder}. The cylindrical mesh is divided into three subdomains which can be visualized with the controls below the wireframe view.
+\item Add two species, $A$ and $B$, both with diffusion constant 1.
+\item Click \textbf{Initial Condition}, select \textit{scatter}, and add 500 molecules of species $A$ in subdomain 1 and 500 molecules of species $B$ in subdomain 3. 
+\item Add two parameters, $k0$ and $k1$, and set their values to 1 and 100, respectively.
+\item Add three reactions:
+\begin{align*}
+\textrm{R1}:&\quad \emptyset\overset{k_1}{\rightarrow} A\\
+\textrm{R2}:&\quad \emptyset\overset{k_1}{\rightarrow} B\\
+\textrm{R3}:&\quad A+B\overset{k_0}{\rightarrow}\emptyset
+\end{align*}
+\item Reaction $R1$ should be restricted to subdomain 1 and reaction $R2$ to subdomain 3. Reaction $R3$ should be allowed throughout the whole domain.
+\item The model is now complete and ready to be simulated.
+\item Navigate to the \textbf{Simulation manager} page.
+\item Select the spatial model you just created and click \textbf{Next}.
+\item Setup the simulation parameters: name, time, data storage frequency, and number of realizations. 
+\item You can specify a random seed for the random number generator under \textbf{Advanced Settings}.
+\item Click \textbf{Run locally}.
+\item In a few seconds you will be directed to the \textbf{Job Status} page where you can check the status of your simulation.
+\item Once your simulation is complete, click \textbf{View results} to open the \textbf{Job summary} page, where you can visualize the diffusion of the two species over time within the cylindrical container and download the output files of the simulation.
+
+\end{enumerate}

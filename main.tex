@@ -1,0 +1,146 @@
+\documentclass[report,openany]{memoir}
+\chapterstyle{ell}
+\pagenumbering{arabic}
+
+
+\setlrmarginsandblock{3cm}{*}{*}
+\checkandfixthelayout
+
+\usepackage{fourier}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{amsmath} 
+\usepackage{extarrows}
+\usepackage{listings}
+\usepackage{url}
+
+\usepackage{colortbl,array}
+\usepackage{tabularx}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+%\usepackage{trackchanges}
+%\addeditor{SH}
+
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{b}{n}%
+      \fontsize{16}{20}%
+      \selectfont}
+
+
+
+%\renewcommand{\maketitlehooka}{Test}
+%\renewcommand{\maketitlehookc}{\vspace{3.0cm}\hspace{2.7cm}\vspace{2.2cm}\includegraphics[scale=1.0]{imgs/stochssoutput.png}}
+
+\renewcommand{\maketitlehooka}{
+\vspace{-150pt}
+
+\begin{figure}[!hbt]
+\hspace{-70pt}
+\includegraphics[width=40pt,height=40pt]{ucsbseal.png}
+\includegraphics[width=40pt,height=40pt]{uulogo.png}
+\vspace{150pt}
+\end{figure}
+}
+
+\title{\rightline{\HUGE StochSS: Stochastic Simulation Service}}
+\date{}
+\renewcommand{\maketitlehookb}{\vspace{-0.4cm}{\rightline{\LARGE User Guide and Tutorial}}\vspace{11.3cm}}
+
+\renewcommand{\maketitlehookc}{\hspace{10.2cm}\includegraphics[scale=0.7]{imgs/stochsslogo.png}}
+
+
+\definecolor{warningbackground}{RGB}{255,255,255}
+
+\newcommand{\warning}[1]{
+    \hspace{\baselineskip}\hrule
+    \begin{tabularx}{\linewidth}{
+        >{\columncolor{warningbackground}}c
+        >{\columncolor{warningbackground}}X}
+        \raisebox{\dimexpr2\baselineskip-\height}
+        {\includegraphics[scale=0.3]{imgs/warningsymbol.png}}&
+        \raisebox{\tabcolsep}{\strut}#1\raisebox{-\tabcolsep}{\strut}
+    \end{tabularx}
+    \hrule\vspace{\baselineskip}
+}
+
+\newcommand{\tip}[1]{
+    \hspace{\baselineskip}\hrule
+    \begin{tabularx}{\linewidth}{
+        >{\columncolor{warningbackground}}c
+        >{\columncolor{warningbackground}}X}
+        \raisebox{\dimexpr2\baselineskip-\height}
+        {\includegraphics[scale=0.3]{imgs/tipsymbol.png}}&
+        \raisebox{\tabcolsep}{\strut}#1\raisebox{-\tabcolsep}{\strut}
+    \end{tabularx}
+    \hrule\vspace{\baselineskip}
+}
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+%\chapter{Introduction}
+
+%\input{intro.tex}
+
+
+\input{T1/tutorial1.tex}
+\input{T2/tutorial2.tex}
+\input{T3/tutorial3.tex}
+\input{T4/tutorial4.tex}
+\input{T6/tutorial6.tex}
+\input{T7/tutorial7.tex}
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{dan}
+  D.T. Gillespie.
+  \textit{Exact stochastic simulation of coupled chemical reactions}.
+  J. Phys. Chem., 81(25), 2340-2361 (1977)
+
+\bibitem{sundials}
+  A. C. Hindmarsh et al.,
+  \textit{SUNDIALS: Suite of nonlinear and differential/algebraic equation solvers}.
+  ACM Trans. Math. Softw., 31(3), 363-396 (2005)
+  
+  \bibitem{scale}
+  W. A. Link and P. F. Doherty Jr.,
+  \textit{Scaling in sensitivity analysis}.
+  Ecology, 83(12), 3299-3305 (2002)
+  
+  \bibitem{calib}
+  M. C. Hill,
+  \textit{Methods and guidelines for effective model calibration}. 
+  U.S. Geol. Surv. Water Resour. Invest. Rep. 98-4005 (1998)
+  
+  \bibitem{bernie}
+  B.J. Daigle et al.
+  \textit{Accelerated maximum likelihood parameter estimation for stochastic biochemical systems}.
+  BMC Bioinformatics, 13, 68 (2012)
+  
+  \bibitem{caffo}
+  B.S. Caffo et al.
+  \textit{Ascent-based Monte Carlo expectation-maximization}. 
+  J. Royal Statistical Society Series B, 67(2), 235-251 (2005)
+  
+  \bibitem{nsm}
+  J. Elf and M. Ehrenberg,
+  \textit{Spontaneous separation of bi-stable biochemical systems into spatial domains of opposite phases}. IEEE Systems Biology, 1, 230-6 (2004)
+  
+ \bibitem{urdme}
+ B. Drawert, S. Engblom and A. Hellander, 
+ \textit{URDME: {A} modular framework for stochastic simulation
+of reaction-transport processes in complex geometries}. BMC Systems Biology, 6(76) (2012)
+  
+  \bibitem{wiki-michaelis-menten}
+  Michaelis-Menten kinetics. 
+  \url{http://en.wikipedia.org/wiki/Michaelis-Menten_kinetics}
+  
+\end{thebibliography}
+
+
+\end{document}

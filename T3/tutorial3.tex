@@ -1,0 +1,36 @@
+\chapter{StochOptim: Parameter Estimation}
+\label{chapter-stochoptim}
+
+StochSS implements parameter estimation for stochastic biochemical systems, StochOptim, via the Monte Carlo expectation-maximization with Modified Cross-Entropy method (MCEM$^2$) \cite{bernie}.
+MCEM$^2$ computes maximum likelihood parameter estimates (MLEs) and associated uncertainties in three consecutive phases: cross-entropy, Monte Carlo expectation-maximization (MCEM), and uncertainty quantification \cite{bernie}.
+
+\section{Example: Estimate parameters of a birth-death model}
+We consider the Birth-Death model that can be imported from the StochSS Public Library (see Section~\ref{chapter1} for instructions on how to import models in StochSS).
+After the model has been imported:
+\begin{enumerate}
+\item Select \textbf{Parameter estimation} from the menu on the left of the screen.
+\item Select the \textit{birthdeath} model and click \textbf{Next}. This will open the \textbf{Simulation page}.
+\item Example files (StochOptim input data) for the initial conditions and the trajectories are provided in the \textit{examples} folder (included in your StochSS package) and are named \textit{birthDeathInitial.txt} and \textit{birthDeathTrajectories.txt}, respectively.
+\item Upload and select these example files.
+\item Configure the checkboxes to only perform parameter estimation on $k1$. For the example model, the value of $k2$ is already optimized.
+\item Click \textbf{Run Locally} to start the parameter estimation.
+\item Select \textbf{Job Status} from the menu on the left of the screen to monitor the status of your submitted job. For the example trajectory data, $k1 = 1.0$ and $k2 = 0.03$ are the correct parameter values so the simulation should converge to somewhere close to these.
+\item Click \textbf{View Progress} to access the \textbf{Job Summary} page and to view more details about status of your job. Parameter estimation calculations using MCEM$^2$ are typically time consuming computations. This simple example takes a little less than $20$ minutes on a desktop Intel i7 computer. A more realistic job will take much longer to run.
+\item When the job has finished, you can generate a new model using the final estimates of the MCEM$^2$ calculation by scrolling to the bottom of the \textbf{Job Summary} page and click \textbf{Create Model from Current Estimates}.
+\item If the job doesn't complete in a reasonable amount of time the job can be stopped manually on the \textbf{Job Status} page and the parameters can be extracted by clicking \textbf{Create Model from Current Estimates}.
+\end{enumerate}
+
+\subsection{StochOptim input file format}
+The StochOptim input data format consists of two tab-separated text files.
+The first file represents the initial conditions of the system, and the second file represents trajectories of it.
+Each file has three base columns. \textit{Time}, \textit{Rep}, and \textit{Weight}. Additional columns are added for every species in the model that parameter estimation is to be run on.
+
+\begin{itemize}
+\item The \textit{Time} column contains the time values of the various trajectories (and should be set to zero for the initial conditions file). 
+\item The \textit{Rep} column is used to include multiple trajectories in one file for fitting. Basically each trajectory should have a different \textit{Rep} number.
+
+\item The \textit{Weight} column is currently unused and should be set to $1$.
+\item The rest of the columns should be named after the species (case-sensitive) in the model the data will be fit against, and the columns themselves should contain integers representing the population counts at the various time points.
+\end{itemize}
+
+An example of this can be seen by comparing the files \textit{birthDeathTrajectories.txt} and \textit{birthDeathTrajectoriesMulti.txt} in the \textit{examples} folder included in the StochSS package.
