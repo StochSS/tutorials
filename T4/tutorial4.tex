@@ -71,7 +71,7 @@ The second rendering type is similar to the first, but instead of rendering surf
 
 \subsection{Volume Rendering}
 
-The final rendering StochSS offers is a volume rendering (Figure \ref{volume}). It uses a basic ray-tracing implementation that follows the techniques in a paper by Congote \cite{Congote:2011}.
+The final rendering StochSS offers is a volume rendering (Figure \ref{volume}). It uses a basic ray-tracing implementation following the one in \cite{congote}.
 
 \begin{figure}[!ht]
   \centering
@@ -79,3 +79,13 @@ The final rendering StochSS offers is a volume rendering (Figure \ref{volume}). 
   \caption{ This is the volume rendering of the same data shown above. The idea behind volume rendering is to color darkly areas with high concentrations and leave volumes with low concentrations transparent. The transparency makes it possible to see inside a volume rendering, and so the slicing as shown in the surface and wireframe renderings is not used. }
   \label{ volume }
 \end{figure}
+
+\begin{thebibliography}{1}
+
+\bibitem{congote}
+  Congote, John and Segura, Alvaro and Kabongo, Luis and Moreno, Aitor and Posada, Jorge and Ruiz, Oscar.
+  \textit{Interactive Visualization of Volumetric Data with WebGL in Real-time}
+  In Proceedings of the 16th International Conference on 3D Web Technology (Web3D '11). ACM, New York, NY, USA, 137-146.
+  \url{http://dx.doi.org/10.1145/2010425.2010449}
+  
+\end{thebibliography}
