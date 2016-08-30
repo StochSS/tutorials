@@ -31,17 +31,21 @@
 \contentsline {subsection}{Surface Renderings with Domain Clipping}{17}
 \contentsline {subsection}{Colorized Wireframe Meshes}{17}
 \contentsline {subsection}{Volume Rendering}{18}
-\contentsline {chapter}{Bibliography}{19}
-\contentsline {chapter}{\chapternumberline {6}Cloud Computing}{20}
-\contentsline {section}{\numberline {6.1}Credentials}{20}
-\contentsline {subsection}{Setting Credentials in StochSS}{20}
-\contentsline {subsection}{Launching and Shutting Down Nodes}{21}
-\contentsline {section}{\numberline {6.2}Job Reproduction}{21}
-\contentsline {subsection}{An Example on Job Reproduction}{21}
-\contentsline {section}{\numberline {6.3}Cost Analysis}{22}
-\contentsline {subsection}{An Example on Job Reproduction}{23}
-\contentsline {chapter}{\chapternumberline {7}Flex Cloud}{24}
-\contentsline {section}{\numberline {7.1}Setting Up Flex Cloud Compute Machines}{24}
-\contentsline {subsection}{Preparing the Flex Cloud compute nodes}{24}
-\contentsline {subsection}{Configuring the compute nodes in StochSS}{24}
-\contentsline {chapter}{Bibliography}{26}
+\contentsline {chapter}{\chapternumberline {6}Cloud Computing}{19}
+\contentsline {section}{\numberline {6.1}Credentials}{19}
+\contentsline {subsection}{Setting Credentials in StochSS}{19}
+\contentsline {subsection}{Launching and Shutting Down Nodes}{20}
+\contentsline {section}{\numberline {6.2}Job Reproduction}{20}
+\contentsline {subsection}{An Example on Job Reproduction}{20}
+\contentsline {section}{\numberline {6.3}Cost Analysis}{21}
+\contentsline {subsection}{An Example on Job Reproduction}{22}
+\contentsline {chapter}{\chapternumberline {7}Flex Cloud}{23}
+\contentsline {section}{\numberline {7.1}Setting Up Flex Cloud Compute Machines}{23}
+\contentsline {subsection}{Preparing the Flex Cloud compute nodes}{23}
+\contentsline {subsection}{Configuring the compute nodes in StochSS}{23}
+\contentsline {chapter}{\chapternumberline {8}Import a custom mesh}{25}
+\contentsline {section}{\numberline {8.1}Mesh library}{25}
+\contentsline {section}{\numberline {8.2}Using DOLFIN Built-In Geometry with Subdomains Outside of Mesh Library}{25}
+\contentsline {section}{\numberline {8.3}Advanced mesh generation}{27}
+\contentsline {section}{\numberline {8.4}References}{28}
+\contentsline {chapter}{Bibliography}{29}

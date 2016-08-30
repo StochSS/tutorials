@@ -76,6 +76,49 @@
 }
 
 
+\usepackage{xcolor}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+
+\definecolor{light-gray}{gray}{0.95}
+
+% the space reserved between for the ``In'' numbers and the code
+\newlength\inwd
+\setlength\inwd{1.3cm}
+
+\newcounter{ipythcntr}
+
+\newtcblisting{ipythonnb}[1][\theipythcntr]{
+  enlarge left by=\inwd,
+  width=\linewidth-\inwd,
+  enhanced,
+  boxrule=0.4pt,
+  colback=light-gray,
+  listing only,
+  top=0pt,
+  bottom=0pt,
+  overlay={
+    \node[
+      anchor=north east,
+      text width=\inwd,
+      font=\footnotesize\ttfamily\color{blue!50!black},
+      inner ysep=2mm,
+      inner xsep=0pt,
+      outer sep=0pt
+      ] 
+      at (frame.north west)
+      {\stepcounter{ipythcntr}In [#1]:};
+  }
+  listing options={
+    basicstyle=\footnotesize\ttfamily,
+    language=python,
+    escapechar=¢,
+    showstringspaces=false,
+  },
+}
+
+
+
 \begin{document}
 \maketitle
 
@@ -92,6 +135,7 @@
 \input{T4/tutorial4.tex}
 \input{T6/tutorial6.tex}
 \input{T7/tutorial7.tex}
+\input{custommesh.tex}
 
 
 
@@ -139,6 +183,12 @@ of reaction-transport processes in complex geometries}. BMC Systems Biology, 6(7
   \bibitem{wiki-michaelis-menten}
   Michaelis-Menten kinetics. 
   \url{http://en.wikipedia.org/wiki/Michaelis-Menten_kinetics}
+  
+  \bibitem{congote}
+  Congote, John and Segura, Alvaro and Kabongo, Luis and Moreno, Aitor and Posada, Jorge and Ruiz, Oscar.
+  \textit{Interactive Visualization of Volumetric Data with WebGL in Real-time}
+  In Proceedings of the 16th International Conference on 3D Web Technology (Web3D '11). ACM, New York, NY, USA, 137-146.
+  \url{http://dx.doi.org/10.1145/2010425.2010449}
   
 \end{thebibliography}
 
