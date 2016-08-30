@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  23 FEB 2015 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  29 AUG 2016 20:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -687,112 +687,11 @@ Package color Info: Driver file: pdftex.def on input line 137.
 \everycr=\toks29
 \minrowclearance=\skip188
 )
-(./trackchanges.sty
-Package: trackchanges 2009/04/22 v0.7.0 TrackChanges file 
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count159
-\calc@Bcount=\count160
-\calc@Adimen=\dimen162
-\calc@Bdimen=\dimen163
-\calc@Askip=\skip189
-\calc@Bskip=\skip190
-LaTeX Info: Redefining \setlength on input line 75.
-LaTeX Info: Redefining \addtolength on input line 76.
-\calc@Ccount=\count161
-\calc@Cskip=\skip191
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/soul/soul.sty
-Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks30
-\SOUL@lasttoken=\toks31
-\SOUL@cmds=\toks32
-\SOUL@buffer=\toks33
-\SOUL@token=\toks34
-\SOUL@spaceskip=\skip192
-\SOUL@ttwidth=\dimen164
-\SOUL@uldp=\dimen165
-\SOUL@ulht=\dimen166
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/morefloats/morefloats.sty
-Package: morefloats 2012/01/28 v1.0f Raise limit of unprocessed floats (HMM; DH
-)
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package morefloats Info: Maximum number of possible floats asked for: 36.
-(morefloats)             LaTeX might run out of memory before this
-(morefloats)             (in which case it will notify you).
-(morefloats)              on input line 171.
-\bx@S=\insert228
-\bx@T=\insert227
-\bx@U=\insert226
-\bx@V=\insert225
-\bx@W=\insert224
-\bx@X=\insert223
-\bx@Y=\insert222
-\bx@Z=\insert221
-\bx@AA=\insert220
-\bx@AB=\insert219
-\bx@AC=\insert218
-\bx@AD=\insert217
-\bx@AE=\insert216
-\bx@AF=\insert215
-\bx@AG=\insert214
-\bx@AH=\insert213
-\bx@AI=\insert212
-\bx@AJ=\insert211
-)
-\c@userid=\count162
-\c@changenumber=\count163
-\c@storefootnote=\count164
-\c@numeditors=\count165
-\c@maxeditors=\count166
-)
 
 LaTeX Warning: Unused global option(s):
     [report].
 
 (./main.aux
-
-LaTeX Warning: Label `sec:pre' multiply defined.
-
-
-LaTeX Warning: Label `sec:pre' multiply defined.
-
-
-LaTeX Warning: Label `fig:2' multiply defined.
-
-
-LaTeX Warning: Label `fig:2' multiply defined.
-
-
-LaTeX Warning: Label `fig:2' multiply defined.
-
-
-LaTeX Warning: Label `fig:2' multiply defined.
-
-
-LaTeX Warning: Label `fig:2' multiply defined.
-
-
-LaTeX Warning: Label `fig:2' multiply defined.
-
 
 LaTeX Warning: Label `fig:2' multiply defined.
 
@@ -848,17 +747,17 @@ File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count167
-\scratchdimen=\dimen167
+\scratchcounter=\count159
+\scratchdimen=\dimen162
 \scratchbox=\box33
-\nofMPsegments=\count168
-\nofMParguments=\count169
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count170
-\MPscratchDim=\dimen168
-\MPnumerator=\count171
-\makeMPintoPDFobject=\count172
-\everyMPtoPDFconversion=\toks36
+\nofMPsegments=\count160
+\nofMParguments=\count161
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count162
+\MPscratchDim=\dimen163
+\MPnumerator=\count163
+\makeMPintoPDFobject=\count164
+\everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -876,6 +775,19 @@ Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -885,7 +797,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count173
+\c@lstlisting=\count165
 
 <ucsbseal.png, id=1, 72.27pt x 72.27pt>
 File: ucsbseal.png Graphic file (type png)
@@ -949,194 +861,241 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 9.19998pt on input line 1.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.99199pt on input line 1.
-)
-[2] [3] (./intro.tex
+
+[2]) (./Install.tex [3]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 1.
-LaTeX Font Info:    Try loading font information for TS1+futs on input line 4.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 11.
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 13.
+
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/fourier/ts1futs.fd
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 4.
+Overfull \hbox (31.64938pt too wide) in paragraph at lines 13--14
+[]\T1/futs/m/n/10 Install Docker Tool-box us-ing di-rec-tions here: https://doc
+s.docker.com/engine/installation/mac/#installation 
+ []
 
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-<T6/user-login.pdf, id=23, 323.2075pt x 494.84875pt>
-File: T6/user-login.pdf Graphic file (type pdf)
- <use T6/user-login.pdf>
-Package pdftex.def Info: T6/user-login.pdf used on input line 13.
-(pdftex.def)             Requested size: 177.76466pt x 272.16765pt.
-)
-[4
+) [4
 
-] [5 <./T6/user-login.pdf>] (./T1/tutorial1.tex
-<T1/admin-login.pdf, id=43, 623.32875pt x 352.31625pt>
-File: T1/admin-login.pdf Graphic file (type pdf)
+]
+Overfull \hbox (17.64365pt too wide) in paragraph at lines 43--43
+ []\T1/cmtt/m/n/10 curl -o stochss.linux.1.7.0.tgz http://stochss.org/releases/
+stochss.linux.1.7.0.tgz[] 
+ []
 
-<use T1/admin-login.pdf>
-Package pdftex.def Info: T1/admin-login.pdf used on input line 12.
-(pdftex.def)             Requested size: 398.92903pt x 225.48163pt.
- [6
 
- <./T1/admin-login.pdf>]
-<T1/user-login.pdf, id=57, 323.2075pt x 494.84875pt>
-File: T1/user-login.pdf Graphic file (type pdf)
- <use T1/user-login.pdf>
-Package pdftex.def Info: T1/user-login.pdf used on input line 21.
-(pdftex.def)             Requested size: 206.8521pt x 316.70212pt.
+Overfull \hbox (30.8994pt too wide) in paragraph at lines 66--67
+\T1/futs/m/n/10 if vir-tu-al-iza-tion is en-abled in your sys-tem: https://www.
+microsoft.com/en-us/download/details.aspx?id=592.
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[5]
+Overfull \hbox (60.63852pt too wide) in paragraph at lines 80--80
+ []\T1/cmtt/m/n/10 docker-machine start stochss1-7 || docker-machine create --d
+river virtualbox stochss1-7[] 
+ []
 
- [7 <./T1/user-login.pdf>]
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 29.
- <imgs/warningsymbol.png, id=72, 128.48pt x 128.48pt>
+
+Overfull \hbox (71.3859pt too wide) in paragraph at lines 100--100
+ []\T1/cmtt/m/n/8 docker run -i -t -p 8080:8080 -p 8000:8000 --name=stochsscont
+ainer1_7 stochss/stochss-launcher:1.7 "/bin/bash"[] 
+ []
+
+
+LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 104.
+
+
+Overfull \hbox (29.14621pt too wide) in paragraph at lines 115--115
+ []\T1/cmtt/m/n/10 ./run.ubuntu.sh -a \textbf{the_ip_address_you_noted_in_Step_
+2_above} -t secretkey[] 
+ []
+
+[6]
+
+LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 140.
+
+
+LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 141.
+
+
+LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 142.
+
+) (./T1/tutorial1.tex [7] <T1/admin.png, id=40, 618.31pt x 364.36125pt>
+File: T1/admin.png Graphic file (type png)
+
+<use T1/admin.png>
+Package pdftex.def Info: T1/admin.png used on input line 11.
+(pdftex.def)             Requested size: 395.71704pt x 233.1904pt.
+ [8
+
+ <./T1/admin.png>] [9]
+<T1/reaction2.png, id=49, 425.59pt x 236.885pt>
+File: T1/reaction2.png Graphic file (type png)
+ <use T1/reaction2.png>
+Package pdftex.def Info: T1/reaction2.png used on input line 75.
+(pdftex.def)             Requested size: 272.37666pt x 151.60588pt.
+
+<T1/reaction1.png, id=50, 425.59pt x 236.885pt>
+File: T1/reaction1.png Graphic file (type png)
+ <use T1/reaction1.png>
+Package pdftex.def Info: T1/reaction1.png used on input line 82.
+(pdftex.def)             Requested size: 272.37666pt x 151.60588pt.
+ [10 <./T1/reaction2.png> <./T1/reaction1.png>]
+<imgs/warningsymbol.png, id=56, 128.48pt x 128.48pt>
 <use imgs/warningsymbol.png> <use imgs/warningsymbol.png>
 File: imgs/warningsymbol.png Graphic file (type png)
 
 <use imgs/warningsymbol.png>
-Package pdftex.def Info: imgs/warningsymbol.png used on input line 60.
+Package pdftex.def Info: imgs/warningsymbol.png used on input line 121.
 (pdftex.def)             Requested size: 38.54428pt x 38.54428pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 60--60
+Overfull \hbox (15.0pt too wide) in paragraph at lines 121--121
 [][] 
  []
 
-[8]
-Overfull \hbox (6.73933pt too wide) in paragraph at lines 72--73
-[]\T1/futs/b/n/10 Click \T1/futs/m/n/10 on the []`Species'[] tag to de-fine che
-m-i-cal species names and their ini-tial val-ues (num-ber of molecules
- []
+[11 <./imgs/warningsymbol.png>]) (./T2/tutorial2.tex [12]) (./T3/tutorial3.tex
+[13
 
-<T1/reactions.pdf, id=77, 757.83125pt x 288.07625pt>
-File: T1/reactions.pdf Graphic file (type pdf)
- <use T1/reactions.pdf>
-Package pdftex.def Info: T1/reactions.pdf used on input line 82.
-(pdftex.def)             Requested size: 485.01035pt x 184.36815pt.
+] [14
 
-Overfull \hbox (42.01035pt too wide) in paragraph at lines 82--83
- [][] 
- []
+]) (./T4/tutorial4.tex [15] [16
 
-[9 <./imgs/warningsymbol.png>]
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 111.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 111.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 111.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.25598pt on input line 111.
- [10 <./T1/reactions.pdf>]
-Overfull \hbox (5.16261pt too wide) in paragraph at lines 113--114
-[]\T1/futs/b/n/10 Select \T1/futs/m/n/10 the model you wish to sim-u-late and \
-T1/futs/b/n/10 click \T1/futs/m/n/10 on the []`Next'[] but-ton. If you are sim-
-u-lat-ing a population-
- []
+]
 
-LaTeX Font Info:    Font shape `T1/futs/bx/it' in size <10> not available
-(Font)              Font shape `T1/futs/b/it' tried instead on input line 132.
-[11]
-Package color Info: Redefining color UserColor on input line 152.
+./T4/tutorial4.tex:42: LaTeX Error: File `surface' not found.
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--155
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...ludegraphics[width=0.5\textwidth]{surface}
+                                                  
+? 
 
- []
+./T4/tutorial4.tex:49: LaTeX Error: File `clipx' not found.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 ...ncludegraphics[width=0.5\textwidth]{clipx}
+                                                  
+? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+./T4/tutorial4.tex:60: LaTeX Error: File `wireframe' not found.
 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 ...degraphics[width=0.5\textwidth]{wireframe}
+                                                  
+? 
 
+./T4/tutorial4.tex:67: LaTeX Error: File `clipy' not found.
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--161
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 ...ncludegraphics[width=0.5\textwidth]{clipy}
+                                                  
+? 
 
- []
-
-[12]) (./T2/tutorial2.tex [13]
-Overfull \hbox (0.23885pt too wide) in paragraph at lines 20--21
-\T1/futs/m/it/10 tro-duc-tion to StochSS \T1/futs/m/n/10 tu-to-rial for in-stru
-c-tions on how to im-port mod-els in StochSS). De-tails on the Michaelis-
- []
+LaTeX Warning: Reference `volume' on page 17 undefined on input line 74.
 
 
-Overfull \hbox (3.31078pt too wide) in paragraph at lines 20--21
-\T1/futs/m/n/10 Menten model can be found at the fol-low-ing URL: $\T1/cmtt/m/n
-/10 http : / / en . wikipedia . org / wiki / Michaelis-[]Menten _
- []
+./T4/tutorial4.tex:78: LaTeX Error: File `volume' not found.
 
-<T2/sensi.pdf, id=107, 562.1pt x 582.175pt>
-File: T2/sensi.pdf Graphic file (type pdf)
- <use T2/sensi.pdf>
-Package pdftex.def Info: T2/sensi.pdf used on input line 26.
-(pdftex.def)             Requested size: 359.74277pt x 372.59073pt.
- [14
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 ...cludegraphics[width=0.5\textwidth]{volume}
+                                                  
+? 
+[17] [18]
+bibitemlist
+) (./T6/tutorial6.tex [19
 
-] [15 <./T2/sensi.pdf>] [16]) (./T3/tutorial3.tex [17] [18
-
-]) (./T4/tutorial4.tex [19]
-[20
-
-] [21] <T4/reactions-spatial.pdf, id=144, 595.03836pt x 187.51897pt>
-File: T4/reactions-spatial.pdf Graphic file (type pdf)
-
-<use T4/reactions-spatial.pdf>
-Package pdftex.def Info: T4/reactions-spatial.pdf used on input line 54.
-(pdftex.def)             Requested size: 380.82324pt x 120.01172pt.
-) (./T6/tutorial6.tex [22 <./T4/reactions-spatial.pdf>] [23
-
-] <T6/T6_fig_credentials.png, id=159, 1023.825pt x 324.21124pt>
+]
+<T6/T6_fig_credentials.png, id=88, 1023.825pt x 324.21124pt>
 File: T6/T6_fig_credentials.png Graphic file (type png)
 
 <use T6/T6_fig_credentials.png>
-Package pdftex.def Info: T6/T6_fig_credentials.png used on input line 31.
+Package pdftex.def Info: T6/T6_fig_credentials.png used on input line 13.
 (pdftex.def)             Requested size: 460.717pt x 145.8937pt.
 
-Overfull \hbox (17.717pt too wide) in paragraph at lines 31--32
+Overfull \hbox (17.717pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-[24 <./T6/T6_fig_credentials.png>]
-<T6/T6_fig_computenode1.png, id=164, 775.89874pt x 416.55624pt>
+[20
+
+ <./T6/T6_fig_credentials.png>]
+<T6/T6_fig_computenode1.png, id=93, 736.7525pt x 393.47pt>
 File: T6/T6_fig_computenode1.png Graphic file (type png)
 
 <use T6/T6_fig_computenode1.png>
-Package pdftex.def Info: T6/T6_fig_computenode1.png used on input line 59.
-(pdftex.def)             Requested size: 349.15121pt x 187.44858pt.
-
-<T6/T6_fig_computenode2.png, id=165, 717.68124pt x 367.3725pt>
-File: T6/T6_fig_computenode2.png Graphic file (type png)
-
-<use T6/T6_fig_computenode2.png>
-Package pdftex.def Info: T6/T6_fig_computenode2.png used on input line 74.
-(pdftex.def)             Requested size: 322.95357pt x 165.31609pt.
- [25 <./T6/T6_fig_computenode1.png>] [26 <./T6/T6_fig_computenode2.png>]
-<T6/T6_fig_reproduction2.png, id=175, 1223.57124pt x 596.2275pt>
-File: T6/T6_fig_reproduction2.png Graphic file (type png)
-
-<use T6/T6_fig_reproduction2.png>
-Package pdftex.def Info: T6/T6_fig_reproduction2.png used on input line 97.
-(pdftex.def)             Requested size: 428.25635pt x 208.68274pt.
-
-<T6/T6_fig_reproduction1.png, id=176, 1232.605pt x 616.3025pt>
+Package pdftex.def Info: T6/T6_fig_computenode1.png used on input line 32.
+(pdftex.def)             Requested size: 331.53555pt x 177.05986pt.
+ [21 <./T6/T6_fig_computenode1.png>]
+<T6/T6_fig_reproduction1.png, id=98, 1232.605pt x 616.3025pt>
 File: T6/T6_fig_reproduction1.png Graphic file (type png)
 
 <use T6/T6_fig_reproduction1.png>
-Package pdftex.def Info: T6/T6_fig_reproduction1.png used on input line 114.
+Package pdftex.def Info: T6/T6_fig_reproduction1.png used on input line 58.
 (pdftex.def)             Requested size: 431.41821pt x 215.7091pt.
- [27 <./T6/T6_fig_reproduction2.png>] [28 <./T6/T6_fig_reproduction1.png>]
-<T6/T6_fig_costanalysis.png, id=185, 1264.725pt x 656.4525pt>
+
+<T6/T6_fig_costanalysis.png, id=99, 1073.00874pt x 665.48625pt>
 File: T6/T6_fig_costanalysis.png Graphic file (type png)
 
 <use T6/T6_fig_costanalysis.png>
-Package pdftex.def Info: T6/T6_fig_costanalysis.png used on input line 129.
-(pdftex.def)             Requested size: 442.66039pt x 229.76181pt.
-) [29 <./T6/T6_fig_costanalysis.png>]
+Package pdftex.def Info: T6/T6_fig_costanalysis.png used on input line 70.
+(pdftex.def)             Requested size: 321.9051pt x 199.64742pt.
+ [22 <./T6/T6_fig_reproduction1.png>])
+(./T7/tutorial7.tex [23 <./T6/T6_fig_costanalysis.png>]
+Overfull \hbox (0.60927pt too wide) in paragraph at lines 15--16
+[]\T1/futs/m/n/10 Install the soft-ware pre-req-ui-sites on the ma-chines by us
+-ing the com-mand line util-ity \T1/futs/m/it/10 make_flex_vms.py
+ []
+
+<T7/T7_fig_flex_uploaded_ssh_keys.png, id=108, 1056.94875pt x 342.27875pt>
+File: T7/T7_fig_flex_uploaded_ssh_keys.png Graphic file (type png)
+
+<use T7/T7_fig_flex_uploaded_ssh_keys.png>
+Package pdftex.def Info: T7/T7_fig_flex_uploaded_ssh_keys.png used on input lin
+e 37.
+(pdftex.def)             Requested size: 475.62254pt x 154.024pt.
+
+Overfull \hbox (32.62254pt too wide) in paragraph at lines 37--38
+ [][] 
+ []
+
+[24
+
+]
+Overfull \hbox (11.91261pt too wide) in paragraph at lines 49--50
+[]\T1/futs/m/n/10 To stop Flex Cloud, click \T1/futs/b/n/10 Stop \T1/futs/m/n/1
+0 on the Flex Cloud con-fig-u-ra-tion page. (Note: \T1/futs/b/n/10 Stop \T1/fut
+s/m/n/10 does not terminate/shut-
+ []
+
+<use imgs/warningsymbol.png> <use imgs/warningsymbol.png>
+File: imgs/warningsymbol.png Graphic file (type png)
+
+<use imgs/warningsymbol.png>
+Package pdftex.def Info: imgs/warningsymbol.png used on input line 51.
+(pdftex.def)             Requested size: 38.54428pt x 38.54428pt.
+) [25 <./T7/T7_fig_flex_uploaded_ssh_keys.png>]
 bibitemlist
-Package color Info: Redefining color UserColor on input line 132.
-[30
+[26
 
 ]
 \tf@toc=\write4
@@ -1144,34 +1103,36 @@ Package color Info: Redefining color UserColor on input line 132.
 
  (./main.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8566 strings out of 493117
- 118865 string characters out of 6135433
- 207282 words of memory out of 5000000
- 11829 multiletter control sequences out of 15000+600000
- 112108 words of font info for 112 fonts, out of 8000000 for 9000
+ 8108 strings out of 493117
+ 112473 string characters out of 6135433
+ 200806 words of memory out of 5000000
+ 11376 multiletter control sequences out of 15000+600000
+ 93125 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,18n,32p,1227b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
-exlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/tex
+ 42i,17n,32p,709b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/adobe/utopia/putbi8a.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2014/texmf-dist
-/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
-public/cm-super/sfss1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
-blic/cm-super/sfss2488.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/cm-super/sftt1000.pfb>
-Output written on main.pdf (30 pages, 708348 bytes).
+14/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/cm-super/sfss2488.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
+1/public/cm-super/sftt0800.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/cm-super/sftt1000.pfb>
+Output written on main.pdf (26 pages, 512767 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 155 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
