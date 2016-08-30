@@ -1,0 +1,161 @@
+%!TEX root = main.tex
+
+\chapter{Installation}
+
+StochSS supports Mac OS X, Linux, and Windows (preliminary) through the Docker platform.
+
+To install StochSS, you'll need to install Docker on your computer, and then use the appropriate StochSS launch application to initialize and run your StochSS Docker container.
+
+\section{Mac OS X}
+
+\subsection{Running StochSS}
+\begin{itemize}
+	\item Install Docker Toolbox using directions here: https://docs.docker.com/engine/installation/mac/\#installation
+	\item Download the Mac OS X application zip file: http://stochss.org/releases/stochss.mac.1.7.0.zip
+	\item Double click the icon to launch server.
+\end{itemize}
+Uninstalling StochSS can be performed with the uninstall app included with the zip file above.
+
+
+\subsection{When things go wrong}
+
+Leaving StochSS is running while the computer goes to sleep can cause the network configuration of the virtual machine to change unexpectedly when the computer is woken up again. This means that StochSS could become temporarily inaccessible. Performing the following steps may solve this: Open a Docker Quickstart terminal window and run:
+\begin{itemize}
+	\item \begin{verbatim}docker-machine start stochss1-7\end{verbatim}
+	\item \begin{verbatim}docker-machine ssh stochss1-7\end{verbatim}
+	\item \begin{verbatim}docker stop stochsscontainer1_7\end{verbatim}
+	\item \begin{verbatim}docker start stochsscontainer1_7\end{verbatim}
+	\item exit
+\end{itemize}
+
+Our suspicion is that when we ssh into the virtual machine, it's network configuration is reset/corrected.
+
+
+\section{Linux}
+StochSS requires Docker to run. The StochSS run script (stochss.sh) uses Docker to download and run StochSS inside a Docker container (this is basically a lightweight virtual machine). Docker and this script are all you need to run Stochss on your Linux computer.
+
+Note: The Ubuntu 12.04 default kernel is too old to support Docker. 12.04 users can instead just run StochSS without the container. Download the package at http://stochss.org/releases/stochss.linux.1.7.0.tgz and refer to the old installation instructions at http://www.stochss.org/wordpress/?page\_id=224\#linux.
+
+\subsection{Running StochSS}
+\begin{itemize}
+	\item Install Docker using directions here: https://docs.docker.com/engine/installation/linux/
+	\item Open up a terminal window
+	\item Download the Ubuntu run script : \begin{verbatim}curl -o stochss.linux.1.7.0.tgz http://stochss.org/releases/stochss.linux.1.7.0.tgz\end{verbatim}
+	\item Untar the folder and navigate inside : \begin{verbatim}tar -xzf stochss.linux.1.7.0.tgz; cd stochss.linux.1.7.0\end{verbatim}
+	\item Run the script (the script will ask for your administrative password): \begin{verbatim}./stochss.sh\end{verbatim}
+\end{itemize}
+
+\subsection{Uninstalling StochSS}
+\begin{itemize}
+	\item Open up a terminal window
+	\item Run:
+\begin{itemize}
+	\item \begin{verbatim}sudo docker stop stochsscontainer1_7\end{verbatim}
+	\item \begin{verbatim}sudo docker rm stochsscontainer1_7\end{verbatim}
+\end{itemize}
+\end{itemize}
+
+
+\section{Windows}
+
+StochSS requires Docker Toolbox for Windows to run. This means you will need a 64 bit Windows installation that supports Docker (Windows 64 7, 8, and 10, should all work).
+
+Please note:
+\begin{enumerate}
+ 	\item StochSS does not run on Microsoft Edge browser. The recommended browser is Google Chrome.
+ 	\item You may have to enable virtualization in the BIOS (Use this Microsoft Virtualization detector to check if virtualization is enabled in your system: https://www.microsoft.com/en-us/download/details.aspx?id=592. If it's not, please enable it from the BIOS first).
+\end{enumerate}
+
+\subsection{Running StochSS}
+
+\begin{enumerate}
+ 	\item Install Docker Toolbox using directions here: https://docs.docker.com/engine/installation/windows/
+\begin{itemize}
+ 	\item To paste text from your clipboard to Docker Quickstart terminal, \textit{right click} onto the terminal screen.
+ 	\item To copy text from the Docker Quickstart terminal onto your clipboard, highlight the desired text and press \textit{enter/return}.
+\end{itemize}
+
+ 	\item Open the Docker QuickStart Terminal. Run the following commands:
+\begin{itemize}
+ 	\item \begin{verbatim}docker-machine start stochss1-7 || docker-machine create --driver virtualbox stochss1-7\end{verbatim}
+ 	\item \begin{verbatim}eval "$(docker-machine env stochss1-7)"\end{verbatim}
+\end{itemize}
+
+This will start/create a Virtual Machine called `stochss1-7', and give you terminal access to it. StochSS will run in this machine. To verify that the machine is running, run the following command:
+\begin{itemize}
+ 	\item \begin{verbatim}docker-machine ls\end{verbatim}
+\end{itemize}
+You should see that the status of machine `stochss1-7' is <em>running</em>.
+
+Please note the IP address of the of the machine `stochss1-7'. Run the following command to determine the IP address:
+\begin{itemize}
+ 	\item \begin{verbatim}docker-machine ip stochss1-7\end{verbatim}
+\end{itemize}
+
+ 	\item If this is the first time you're starting StochSS, run the following to start StochSS container:
+\begin{itemize}
+
+\begingroup
+    \fontsize{8pt}{12pt}\selectfont
+ 	\item \begin{verbatim}docker run -i -t -p 8080:8080 -p 8000:8000 --name=stochsscontainer1_7 stochss/stochss-launcher:1.7 "/bin/bash"\end{verbatim}
+\endgroup
+
+\end{itemize}
+This will download the StochSS docker image, create the StochSS docker container and give terminal access to it. \textbf{PLEASE NOTE}: when this is complete you will get the message: \begin{verbatim}bash: /usr/local/share/dolfin/dolfin.conf: No such file or directory\end{verbatim}. ÊThis is not an error, please continue with the installation.
+
+Otherwise, if you already have a StochSS docker container (i.e. when you use StochSS subsequently), run
+\begin{itemize}
+ 	\item \begin{verbatim}docker start stochsscontainer1_7\end{verbatim}
+ 	\item \begin{verbatim}docker exec -ti stochsscontainer1_7 /bin/bash\end{verbatim}
+\end{itemize}
+
+ 	\item Run the following commands to start the server:
+\begin{itemize}
+ 	\item \begin{verbatim}cd stochss-master\end{verbatim}
+ 	\item \begin{verbatim}./run.ubuntu.sh -a \textbf{the_ip_address_you_noted_in_Step_2_above} -t secretkey\end{verbatim}
+\end{itemize}
+Navigate to the URL displayed to access StochSS.
+ 	\item Follow the instructions on the terminal to kill the server process. After that, run the following commands to stop the container:
+\begin{itemize}
+ 	\item \begin{verbatim}exit\end{verbatim}
+ 	\item \begin{verbatim}docker stop stochsscontainer1_7\end{verbatim}
+ 	\item \begin{verbatim}docker-machine stop stochss1-7\end{verbatim}
+\end{itemize}
+These commands will stop the container and virtual machine. The terminal window can now be safely closed.
+\end{enumerate}
+
+\subsection{Uninstalling StochSS}
+
+\begin{enumerate}
+ 	\item Open the Docker Quickstart terminal
+ 	\item Run the following command:
+\begin{verbatim}docker-machine rm stochss1-7\end{verbatim}
+\end{enumerate}
+
+\subsection{When things go wrong}
+
+\begin{enumerate}
+ 	\item Launching and using StochSS on Windows is error-prone. Some useful commands that may help you in figuring out what's going on when things don't work as expected are:
+\begin{itemize}
+ 	\item \begin{verbatim}docker-machine ls\end{verbatim} will list the virtual machines running and their status.
+ 	\item \begin{verbatim}docker ps\end{verbatim} will list the containers that are \textit{running}.
+ 	\item \begin{verbatim}docker ps -aq\end{verbatim} will list all containers in the virtual machine, running or stopped.
+\end{itemize}
+
+ 	\item Leaving StochSS is running while the computer goes to sleep can cause the network configuration of the virtual machine to change unexpectedly when the computer is woken up again. This means that StochSS could become temporarily inaccessible. Performing the following steps may solve this:Open a Docker Quickstart terminal window and Run:
+\begin{itemize}
+ 	\item \begin{verbatim}docker-machine start stochss1-7\end{verbatim}
+ 	\item \begin{verbatim}docker-machine ssh stochss1-7\end{verbatim}
+ 	\item \begin{verbatim}docker stop stochsscontainer1_7\end{verbatim}
+ 	\item \begin{verbatim}docker start stochsscontainer1_7\end{verbatim}
+ 	\item \begin{verbatim}exit\end{verbatim}
+\end{itemize}
+Follow the instructions in this guide to start StochSS.
+
+Our suspicion is that when we ssh into the virtual machine, it's network configuration is reset/corrected.
+\end{enumerate}
+
+\section{Note on security}
+When you run StochSS, it is encapsulated inside a virtual machine. If something goes wrong with the StochSS virtual machine, it is isolated from everything else on your system.
+
+
