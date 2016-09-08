@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  29 AUG 2016 23:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 SEP 2016 10:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1450,62 +1450,8 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 121--121
 
 ]) (./T4/tutorial4.tex [15] [16
 
-]
-
-./T4/tutorial4.tex:42: LaTeX Error: File `surface' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 ...ludegraphics[width=0.5\textwidth]{surface}
-                                                  
-? 
-
-./T4/tutorial4.tex:49: LaTeX Error: File `clipx' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49 ...ncludegraphics[width=0.5\textwidth]{clipx}
-                                                  
-? 
-
-./T4/tutorial4.tex:60: LaTeX Error: File `wireframe' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60 ...degraphics[width=0.5\textwidth]{wireframe}
-                                                  
-? 
-
-./T4/tutorial4.tex:67: LaTeX Error: File `clipy' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.67 ...ncludegraphics[width=0.5\textwidth]{clipy}
-                                                  
-? 
-
-LaTeX Warning: Reference `volume' on page 17 undefined on input line 74.
-
-
-./T4/tutorial4.tex:78: LaTeX Error: File `volume' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.78 ...cludegraphics[width=0.5\textwidth]{volume}
-                                                  
-? 
-[17]) (./T6/tutorial6.tex [18]
-<T6/T6_fig_credentials.png, id=87, 1023.825pt x 324.21124pt>
+]) (./T6/tutorial6.tex [17]
+<T6/T6_fig_credentials.png, id=84, 1023.825pt x 324.21124pt>
 File: T6/T6_fig_credentials.png Graphic file (type png)
 
 <use T6/T6_fig_credentials.png>
@@ -1516,37 +1462,91 @@ Overfull \hbox (17.717pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-[19
+[18
 
  <./T6/T6_fig_credentials.png>]
-<T6/T6_fig_computenode1.png, id=93, 736.7525pt x 393.47pt>
+<T6/T6_fig_computenode1.png, id=89, 736.7525pt x 393.47pt>
 File: T6/T6_fig_computenode1.png Graphic file (type png)
 
 <use T6/T6_fig_computenode1.png>
 Package pdftex.def Info: T6/T6_fig_computenode1.png used on input line 32.
 (pdftex.def)             Requested size: 331.53555pt x 177.05986pt.
- [20 <./T6/T6_fig_computenode1.png>]
-<T6/T6_fig_reproduction1.png, id=98, 1232.605pt x 616.3025pt>
+ [19 <./T6/T6_fig_computenode1.png>]
+<T6/T6_fig_reproduction1.png, id=95, 1232.605pt x 616.3025pt>
 File: T6/T6_fig_reproduction1.png Graphic file (type png)
 
 <use T6/T6_fig_reproduction1.png>
 Package pdftex.def Info: T6/T6_fig_reproduction1.png used on input line 58.
 (pdftex.def)             Requested size: 431.41821pt x 215.7091pt.
 
-<T6/T6_fig_costanalysis.png, id=99, 1073.00874pt x 665.48625pt>
+<T6/T6_fig_costanalysis.png, id=96, 1073.00874pt x 665.48625pt>
 File: T6/T6_fig_costanalysis.png Graphic file (type png)
 
 <use T6/T6_fig_costanalysis.png>
 Package pdftex.def Info: T6/T6_fig_costanalysis.png used on input line 70.
 (pdftex.def)             Requested size: 321.9051pt x 199.64742pt.
- [21 <./T6/T6_fig_reproduction1.png>])
-(./T7/tutorial7.tex [22 <./T6/T6_fig_costanalysis.png>]
+ [20 <./T6/T6_fig_reproduction1.png>])
+(./PSweep/psweep.tex [21 <./T6/T6_fig_costanalysis.png>]
+<Psweep/heatmap.png, id=105, 922.44624pt x 705.63625pt>
+File: Psweep/heatmap.png Graphic file (type png)
+
+<use Psweep/heatmap.png>
+Package pdftex.def Info: Psweep/heatmap.png used on input line 12.
+(pdftex.def)             Requested size: 420.84865pt x 321.92636pt.
+) (./Vis/vis.tex [22
+
+] [23 <./Psweep/heatmap.png>]
+<Vis/surface.png, id=113, 425.59pt x 173.64874pt>
+File: Vis/surface.png Graphic file (type png)
+ <use Vis/surface.png>
+Package pdftex.def Info: Vis/surface.png used on input line 12.
+(pdftex.def)             Requested size: 221.5pt x 90.37735pt.
+
+<Vis/clipx.png, id=114, 425.59pt x 173.64874pt>
+File: Vis/clipx.png Graphic file (type png)
+ <use Vis/clipx.png>
+Package pdftex.def Info: Vis/clipx.png used on input line 19.
+(pdftex.def)             Requested size: 221.5pt x 90.37735pt.
+ [24
+
+ <./Vis/surface.png> <./Vis/clipx.png>]
+<Vis/wireframe.png, id=120, 425.59pt x 173.64874pt>
+File: Vis/wireframe.png Graphic file (type png)
+ <use Vis/wireframe.png>
+Package pdftex.def Info: Vis/wireframe.png used on input line 30.
+(pdftex.def)             Requested size: 221.5pt x 90.37735pt.
+
+<Vis/clipy.png, id=121, 425.59pt x 173.64874pt>
+File: Vis/clipy.png Graphic file (type png)
+ <use Vis/clipy.png>
+Package pdftex.def Info: Vis/clipy.png used on input line 37.
+(pdftex.def)             Requested size: 221.5pt x 90.37735pt.
+
+
+LaTeX Warning: Reference `volume' on page 25 undefined on input line 44.
+
+<Vis/volume.png, id=122, 425.59pt x 173.64874pt>
+File: Vis/volume.png Graphic file (type png)
+ <use Vis/volume.png>
+Package pdftex.def Info: Vis/volume.png used on input line 48.
+(pdftex.def)             Requested size: 221.5pt x 90.37735pt.
+
+<Vis/vis-jupyter.png, id=123, 772.8875pt x 730.73pt>
+File: Vis/vis-jupyter.png Graphic file (type png)
+ <use Vis/vis-jupyter.png>
+Package pdftex.def Info: Vis/vis-jupyter.png used on input line 63.
+(pdftex.def)             Requested size: 354.40135pt x 335.06947pt.
+) (./T7/tutorial7.tex [25 <./Vis/wireframe.png> <./Vis/clipy.png>]
+
+LaTeX Warning: Text page 26 contains only floats.
+
+[26 <./Vis/volume.png> <./Vis/vis-jupyter.png>]
 Overfull \hbox (0.60927pt too wide) in paragraph at lines 15--16
 []\T1/futs/m/n/10 Install the soft-ware pre-req-ui-sites on the ma-chines by us
 -ing the com-mand line util-ity \T1/futs/m/it/10 make_flex_vms.py
  []
 
-<T7/T7_fig_flex_uploaded_ssh_keys.png, id=108, 1056.94875pt x 342.27875pt>
+<T7/T7_fig_flex_uploaded_ssh_keys.png, id=135, 1056.94875pt x 342.27875pt>
 File: T7/T7_fig_flex_uploaded_ssh_keys.png Graphic file (type png)
 
 <use T7/T7_fig_flex_uploaded_ssh_keys.png>
@@ -1558,7 +1558,7 @@ Overfull \hbox (32.62254pt too wide) in paragraph at lines 37--38
  [][] 
  []
 
-[23
+[27
 
 ]
 Overfull \hbox (11.91261pt too wide) in paragraph at lines 49--50
@@ -1580,7 +1580,7 @@ Package xcolor Warning: Incompatible color definition on input line 51.
 
 Package xcolor Warning: Incompatible color definition on input line 51.
 
-) (./custommesh.tex [24 <./T7/T7_fig_flex_uploaded_ssh_keys.png>]
+) (./custommesh.tex [28 <./T7/T7_fig_flex_uploaded_ssh_keys.png>]
 \openout5 = `main.listing'.
 
 
@@ -1649,7 +1649,7 @@ Missing character: There is no s in font nullfont!
 
 Underfull \vbox (badness 2469) has occurred while \output is active []
 
- [25
+ [29
 
 ]
 \openout5 = `main.listing'.
@@ -1742,7 +1742,7 @@ Missing character: There is no s in font nullfont!
 
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
- [26]
+ [30]
 \openout5 = `main.listing'.
 
 
@@ -1795,7 +1795,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
- [27]
+ [31]
 \openout5 = `main.listing'.
 
  (./main.listing)
@@ -1854,9 +1854,9 @@ Overfull \hbox (3.1726pt too wide) in paragraph at lines 189--191
 i.xml" file that was cre-ated us-ing a dolfin?convert
  []
 
-) [28]
+) [32]
 bibitemlist
-[29
+[33
 
 ]
 \tf@toc=\write6
@@ -1871,10 +1871,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27469 strings out of 493117
- 528508 string characters out of 6135433
- 678145 words of memory out of 5000000
- 30420 multiletter control sequences out of 15000+600000
+ 27502 strings out of 493117
+ 529262 string characters out of 6135433
+ 678782 words of memory out of 5000000
+ 30454 multiletter control sequences out of 15000+600000
  93438 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,17n,93p,10425b,2410s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1891,10 +1891,10 @@ pe1/public/cm-super/sfss2488.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/public/cm-super/sftt0800.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
 public/cm-super/sftt0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
 blic/cm-super/sftt1000.pfb>
-Output written on main.pdf (29 pages, 550426 bytes).
+Output written on main.pdf (33 pages, 1081573 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 199 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
 

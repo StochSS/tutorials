@@ -1,0 +1,17 @@
+%!TEX root = ../main.tex
+
+\chapter{Parameter Sweeps}
+
+It is often of interest to explore the parameter space of a model. Maybe we are unsure of the what the value of some parameters should be, or maybe we want to find regions in parameter space where the model exhibits interesting behavior.
+
+StochSS supports sweeps over one or two parameters. To set up a parameter sweep, simply click \textbf{Parameter Sweep}. Select the model that you want to analyze, and then define your sweep. You can select the parameters you want to analyze, the upper and lower bound of the parameters, and the number of steps in each parameter.
+
+First import the \emph{lotkavolterra\_concentration\_oscil} model from the \emph{Public Library}. Select this model in the parameter sweep main window, and run a two-parameter sweep over $k1$ and $k2$. Click \textbf{Run Local}, and wait for the computation to finish. Once it has finished, you can visualize the output on the \textbf{Job Summary} page, see Figure \ref{psweep-fig1}. You can select to view the average concentrations, the max- and min-values, as well as the variance.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\textwidth]{Psweep/heatmap.png}
+\caption{\label{psweep-fig1}A two-parameter sweep is visualized as a heat map. Here we have performed a sweep over the two parameters $k1$ and $k2$ of the \emph{lotkavolterra\_concentration\_oscil} model. }
+\end{figure}
+
+Finally, if you need to perform a more in depth analysis of the data, there is the option of exporting the parameter sweep to a Jupyter Notebook. On the \textbf{Job Summary} page, click \textbf{Analyze using interactive Jupyter Notebook}. This launches a Jupyter Notebook, with a ready-made template for analyzing the data. We recommend users unfamiliar with Jupyter to visit http://jupyter.org for in-depth documentation and tutorials.
+
