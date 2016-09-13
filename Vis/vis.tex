@@ -1,7 +1,7 @@
 %!TEX root = ../main.tex
 
 \chapter{Visualization}
-Full three dimensional spatial stochastic simulations can be difficult to analyze. To simplify the process, StochSS has built in three different methods for visualization of spatial models.
+Full three-dimensional spatial stochastic simulations can be difficult to analyze. To simplify the process, StochSS has built in three different methods for visualization of spatial models.
 
 \section{Surface Renderings with Domain Clipping}
 
@@ -41,13 +41,13 @@ The second rendering type is similar to the first, but instead of rendering surf
 
 \section{Volume Rendering}
 
-The final rendering StochSS offers is a volume rendering (Figure \ref{volume}). It uses a basic ray-tracing implementation following the one in \cite{congote}.
+The final rendering StochSS offers is a volume rendering (Figure \ref{fig:volume}). It uses a basic ray-tracing implementation following the one in \cite{congote}.
 
 \begin{figure}[!ht]
   \centering
     \includegraphics[width=0.5\textwidth]{Vis/volume}
   \caption{ This is the volume rendering of the same data shown above. The idea behind volume rendering is to color darkly areas with high concentrations and leave volumes with low concentrations transparent. The transparency makes it possible to see inside a volume rendering, and so the slicing as shown in the surface and wireframe renderings is not used. }
-  \label{ volume }
+  \label{fig:volume}
 \end{figure}
 
 \section{Visualization in Interactive Jupyter Notebook}

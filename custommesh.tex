@@ -152,7 +152,7 @@ class ecoli(pyurdme.URDMEModel):
 	def __init__(self,model_name="polarization"):
 		pyurdme.URDMEModel.__init__(self,model_name)
 		
-		\#DefineGeometry
+		#DefineGeometry
 		self.mesh=pyurdme.URDMEMesh(mesh=dolfin.Mesh('coli.xml'))
 
 		cell_function=dolfin.CellFunction("size_t",self.mesh)
@@ -167,7 +167,7 @@ class ecoli(pyurdme.URDMEModel):
 		self.add_subdomain(cell_function)
 		self.add_subdomain(facet_function)
 
-		\#Define initial populations
+		#Define initial populations
 		self.set_initial_condition_scatter({},[1])
 \end{ipythonnb}
 

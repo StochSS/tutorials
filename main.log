@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 SEP 2016 10:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  12 SEP 2016 20:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1407,51 +1407,56 @@ LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 142.
 File: T1/admin.png Graphic file (type png)
 
 <use T1/admin.png>
-Package pdftex.def Info: T1/admin.png used on input line 11.
+Package pdftex.def Info: T1/admin.png used on input line 13.
 (pdftex.def)             Requested size: 395.71704pt x 233.1904pt.
  [8
 
- <./T1/admin.png>] [9]
-<T1/reaction2.png, id=52, 425.59pt x 236.885pt>
+ <./T1/admin.png>]
+Overfull \hbox (1.61212pt too wide) in paragraph at lines 58--60
+[]\T1/futs/m/n/10 After im-port-ing the model, StochSS should dis-play the im-p
+orted model in the model ed-i-tor. Look through
+ []
+
+[9] <T1/reaction2.png, id=51, 425.59pt x 236.885pt>
 File: T1/reaction2.png Graphic file (type png)
  <use T1/reaction2.png>
-Package pdftex.def Info: T1/reaction2.png used on input line 75.
+Package pdftex.def Info: T1/reaction2.png used on input line 87.
 (pdftex.def)             Requested size: 272.37666pt x 151.60588pt.
 
-<T1/reaction1.png, id=53, 425.59pt x 236.885pt>
+<T1/reaction1.png, id=52, 425.59pt x 236.885pt>
 File: T1/reaction1.png Graphic file (type png)
  <use T1/reaction1.png>
-Package pdftex.def Info: T1/reaction1.png used on input line 82.
+Package pdftex.def Info: T1/reaction1.png used on input line 94.
 (pdftex.def)             Requested size: 272.37666pt x 151.60588pt.
- [10 <./T1/reaction2.png> <./T1/reaction1.png>]
-<imgs/warningsymbol.png, id=59, 128.48pt x 128.48pt>
+ [10 <./T1/reaction2.png>] [11 <./T1/reaction1.png>]
+<imgs/warningsymbol.png, id=62, 128.48pt x 128.48pt>
 <use imgs/warningsymbol.png> <use imgs/warningsymbol.png>
 File: imgs/warningsymbol.png Graphic file (type png)
 
 <use imgs/warningsymbol.png>
-Package pdftex.def Info: imgs/warningsymbol.png used on input line 121.
+Package pdftex.def Info: imgs/warningsymbol.png used on input line 133.
 (pdftex.def)             Requested size: 38.54428pt x 38.54428pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 121.
+Package xcolor Warning: Incompatible color definition on input line 133.
 
 
-Package xcolor Warning: Incompatible color definition on input line 121.
+Package xcolor Warning: Incompatible color definition on input line 133.
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 121--121
+Overfull \hbox (15.0pt too wide) in paragraph at lines 133--133
 [][] 
  []
 
-[11 <./imgs/warningsymbol.png>]) (./T2/tutorial2.tex [12]) (./T3/tutorial3.tex
-[13
+[12 <./imgs/warningsymbol.png>]) (./T2/tutorial2.tex [13]) (./T3/tutorial3.tex
+[14
 
-] [14
+] [15
 
-]) (./T4/tutorial4.tex [15] [16
+]) (./T4/tutorial4.tex [16] [17
 
-]) (./T6/tutorial6.tex [17]
-<T6/T6_fig_credentials.png, id=84, 1023.825pt x 324.21124pt>
+]) (./T6/tutorial6.tex [18]
+<T6/T6_fig_credentials.png, id=87, 1023.825pt x 324.21124pt>
 File: T6/T6_fig_credentials.png Graphic file (type png)
 
 <use T6/T6_fig_credentials.png>
@@ -1462,91 +1467,88 @@ Overfull \hbox (17.717pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-[18
+[19
 
  <./T6/T6_fig_credentials.png>]
-<T6/T6_fig_computenode1.png, id=89, 736.7525pt x 393.47pt>
+<T6/T6_fig_computenode1.png, id=93, 736.7525pt x 393.47pt>
 File: T6/T6_fig_computenode1.png Graphic file (type png)
 
 <use T6/T6_fig_computenode1.png>
 Package pdftex.def Info: T6/T6_fig_computenode1.png used on input line 32.
 (pdftex.def)             Requested size: 331.53555pt x 177.05986pt.
- [19 <./T6/T6_fig_computenode1.png>]
-<T6/T6_fig_reproduction1.png, id=95, 1232.605pt x 616.3025pt>
+ [20 <./T6/T6_fig_computenode1.png>]
+<T6/T6_fig_reproduction1.png, id=98, 1232.605pt x 616.3025pt>
 File: T6/T6_fig_reproduction1.png Graphic file (type png)
 
 <use T6/T6_fig_reproduction1.png>
 Package pdftex.def Info: T6/T6_fig_reproduction1.png used on input line 58.
 (pdftex.def)             Requested size: 431.41821pt x 215.7091pt.
 
-<T6/T6_fig_costanalysis.png, id=96, 1073.00874pt x 665.48625pt>
+<T6/T6_fig_costanalysis.png, id=99, 1073.00874pt x 665.48625pt>
 File: T6/T6_fig_costanalysis.png Graphic file (type png)
 
 <use T6/T6_fig_costanalysis.png>
 Package pdftex.def Info: T6/T6_fig_costanalysis.png used on input line 70.
 (pdftex.def)             Requested size: 321.9051pt x 199.64742pt.
- [20 <./T6/T6_fig_reproduction1.png>])
-(./PSweep/psweep.tex [21 <./T6/T6_fig_costanalysis.png>]
-<Psweep/heatmap.png, id=105, 922.44624pt x 705.63625pt>
+ [21 <./T6/T6_fig_reproduction1.png>])
+(./PSweep/psweep.tex [22 <./T6/T6_fig_costanalysis.png>]
+<Psweep/heatmap.png, id=108, 789.95125pt x 602.25pt>
 File: Psweep/heatmap.png Graphic file (type png)
-
-<use Psweep/heatmap.png>
+ <use Psweep/heatmap.png>
 Package pdftex.def Info: Psweep/heatmap.png used on input line 12.
-(pdftex.def)             Requested size: 420.84865pt x 321.92636pt.
-) (./Vis/vis.tex [22
+(pdftex.def)             Requested size: 420.84865pt x 320.8543pt.
+)
+(./Vis/vis.tex [23
 
-] [23 <./Psweep/heatmap.png>]
-<Vis/surface.png, id=113, 425.59pt x 173.64874pt>
+] [24 <./Psweep/heatmap.png>]
+<Vis/surface.png, id=116, 425.59pt x 173.64874pt>
 File: Vis/surface.png Graphic file (type png)
  <use Vis/surface.png>
 Package pdftex.def Info: Vis/surface.png used on input line 12.
 (pdftex.def)             Requested size: 221.5pt x 90.37735pt.
 
-<Vis/clipx.png, id=114, 425.59pt x 173.64874pt>
+<Vis/clipx.png, id=117, 425.59pt x 173.64874pt>
 File: Vis/clipx.png Graphic file (type png)
  <use Vis/clipx.png>
 Package pdftex.def Info: Vis/clipx.png used on input line 19.
 (pdftex.def)             Requested size: 221.5pt x 90.37735pt.
- [24
+ [25
 
  <./Vis/surface.png> <./Vis/clipx.png>]
-<Vis/wireframe.png, id=120, 425.59pt x 173.64874pt>
+<Vis/wireframe.png, id=124, 425.59pt x 173.64874pt>
 File: Vis/wireframe.png Graphic file (type png)
  <use Vis/wireframe.png>
 Package pdftex.def Info: Vis/wireframe.png used on input line 30.
 (pdftex.def)             Requested size: 221.5pt x 90.37735pt.
 
-<Vis/clipy.png, id=121, 425.59pt x 173.64874pt>
+<Vis/clipy.png, id=125, 425.59pt x 173.64874pt>
 File: Vis/clipy.png Graphic file (type png)
  <use Vis/clipy.png>
 Package pdftex.def Info: Vis/clipy.png used on input line 37.
 (pdftex.def)             Requested size: 221.5pt x 90.37735pt.
 
-
-LaTeX Warning: Reference `volume' on page 25 undefined on input line 44.
-
-<Vis/volume.png, id=122, 425.59pt x 173.64874pt>
+<Vis/volume.png, id=126, 425.59pt x 173.64874pt>
 File: Vis/volume.png Graphic file (type png)
  <use Vis/volume.png>
 Package pdftex.def Info: Vis/volume.png used on input line 48.
 (pdftex.def)             Requested size: 221.5pt x 90.37735pt.
 
-<Vis/vis-jupyter.png, id=123, 772.8875pt x 730.73pt>
+<Vis/vis-jupyter.png, id=127, 772.8875pt x 730.73pt>
 File: Vis/vis-jupyter.png Graphic file (type png)
  <use Vis/vis-jupyter.png>
 Package pdftex.def Info: Vis/vis-jupyter.png used on input line 63.
 (pdftex.def)             Requested size: 354.40135pt x 335.06947pt.
-) (./T7/tutorial7.tex [25 <./Vis/wireframe.png> <./Vis/clipy.png>]
+) (./T7/tutorial7.tex [26 <./Vis/wireframe.png> <./Vis/clipy.png>]
 
-LaTeX Warning: Text page 26 contains only floats.
+LaTeX Warning: Text page 27 contains only floats.
 
-[26 <./Vis/volume.png> <./Vis/vis-jupyter.png>]
+[27 <./Vis/volume.png> <./Vis/vis-jupyter.png>]
 Overfull \hbox (0.60927pt too wide) in paragraph at lines 15--16
 []\T1/futs/m/n/10 Install the soft-ware pre-req-ui-sites on the ma-chines by us
 -ing the com-mand line util-ity \T1/futs/m/it/10 make_flex_vms.py
  []
 
-<T7/T7_fig_flex_uploaded_ssh_keys.png, id=135, 1056.94875pt x 342.27875pt>
+<T7/T7_fig_flex_uploaded_ssh_keys.png, id=138, 1056.94875pt x 342.27875pt>
 File: T7/T7_fig_flex_uploaded_ssh_keys.png Graphic file (type png)
 
 <use T7/T7_fig_flex_uploaded_ssh_keys.png>
@@ -1558,7 +1560,7 @@ Overfull \hbox (32.62254pt too wide) in paragraph at lines 37--38
  [][] 
  []
 
-[27
+[28
 
 ]
 Overfull \hbox (11.91261pt too wide) in paragraph at lines 49--50
@@ -1580,7 +1582,7 @@ Package xcolor Warning: Incompatible color definition on input line 51.
 
 Package xcolor Warning: Incompatible color definition on input line 51.
 
-) (./custommesh.tex [28 <./T7/T7_fig_flex_uploaded_ssh_keys.png>]
+) (./custommesh.tex [29 <./T7/T7_fig_flex_uploaded_ssh_keys.png>]
 \openout5 = `main.listing'.
 
 
@@ -1649,7 +1651,7 @@ Missing character: There is no s in font nullfont!
 
 Underfull \vbox (badness 2469) has occurred while \output is active []
 
- [29
+ [30
 
 ]
 \openout5 = `main.listing'.
@@ -1742,7 +1744,7 @@ Missing character: There is no s in font nullfont!
 
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
- [30]
+ [31]
 \openout5 = `main.listing'.
 
 
@@ -1795,7 +1797,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
- [31]
+ [32]
 \openout5 = `main.listing'.
 
  (./main.listing)
@@ -1854,9 +1856,9 @@ Overfull \hbox (3.1726pt too wide) in paragraph at lines 189--191
 i.xml" file that was cre-ated us-ing a dolfin?convert
  []
 
-) [32]
+) [33]
 bibitemlist
-[33
+[34
 
 ]
 \tf@toc=\write6
@@ -1864,17 +1866,14 @@ bibitemlist
 
  (./main.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27502 strings out of 493117
- 529262 string characters out of 6135433
- 678782 words of memory out of 5000000
- 30454 multiletter control sequences out of 15000+600000
+ 27501 strings out of 493117
+ 529256 string characters out of 6135433
+ 679739 words of memory out of 5000000
+ 30453 multiletter control sequences out of 15000+600000
  93438 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,17n,93p,10425b,2410s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1891,10 +1890,10 @@ pe1/public/cm-super/sfss2488.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/public/cm-super/sftt0800.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
 public/cm-super/sftt0900.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
 blic/cm-super/sftt1000.pfb>
-Output written on main.pdf (33 pages, 1081573 bytes).
+Output written on main.pdf (34 pages, 1060880 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 202 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  108 words of extra memory for PDF output out of 10000 (max. 10000000)
 

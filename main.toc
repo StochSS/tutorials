@@ -15,39 +15,39 @@
 \contentsline {section}{\numberline {2.1}Creating Administrator and Standard User Accounts}{8}
 \contentsline {section}{\numberline {2.2}Importing a Model}{9}
 \contentsline {subsection}{Importing an existing model}{9}
-\contentsline {section}{\numberline {2.3}Creating a New Model}{9}
+\contentsline {section}{\numberline {2.3}Creating a New Model}{10}
 \contentsline {section}{\numberline {2.4}Running a Simulation and Visualizing results}{11}
 \contentsline {subsection}{Converting a concentration model to population}{11}
 \contentsline {section}{\numberline {2.5}Backup and Transfer your Data}{12}
-\contentsline {subsection}{Exporting data from an old version of StochSS (1.2 or previous)}{12}
-\contentsline {chapter}{\chapternumberline {3}Sensitivity Analysis}{13}
-\contentsline {section}{\numberline {3.1}Example: Michaelis-Menten}{13}
-\contentsline {chapter}{\chapternumberline {4}StochOptim: Parameter Estimation}{14}
-\contentsline {section}{\numberline {4.1}Example: Estimate parameters of a birth-death model}{14}
-\contentsline {subsection}{StochOptim input file format}{15}
-\contentsline {chapter}{\chapternumberline {5}Spatial Stochastic Simulations}{16}
-\contentsline {section}{\numberline {5.1}Example: Annihilation of two species in a cylinder}{16}
-\contentsline {chapter}{\chapternumberline {6}Cloud Computing}{18}
-\contentsline {section}{\numberline {6.1}Credentials}{18}
-\contentsline {subsection}{Setting Credentials in StochSS}{18}
-\contentsline {subsection}{Launching and Shutting Down Nodes}{19}
-\contentsline {section}{\numberline {6.2}Job Reproduction}{19}
-\contentsline {subsection}{An Example on Job Reproduction}{19}
-\contentsline {section}{\numberline {6.3}Cost Analysis}{20}
-\contentsline {subsection}{An Example on Job Reproduction}{21}
-\contentsline {chapter}{\chapternumberline {7}Parameter Sweeps}{22}
-\contentsline {chapter}{\chapternumberline {8}Visualization}{24}
-\contentsline {section}{\numberline {8.1}Surface Renderings with Domain Clipping}{24}
-\contentsline {section}{\numberline {8.2}Colorized Wireframe Meshes}{25}
-\contentsline {section}{\numberline {8.3}Volume Rendering}{25}
-\contentsline {section}{\numberline {8.4}Visualization in Interactive Jupyter Notebook}{25}
-\contentsline {chapter}{\chapternumberline {9}Flex Cloud}{27}
-\contentsline {section}{\numberline {9.1}Setting Up Flex Cloud Compute Machines}{27}
-\contentsline {subsection}{Preparing the Flex Cloud compute nodes}{27}
-\contentsline {subsection}{Configuring the compute nodes in StochSS}{27}
-\contentsline {chapter}{\chapternumberline {10}Import a custom mesh}{29}
-\contentsline {section}{\numberline {10.1}Mesh library}{29}
-\contentsline {section}{\numberline {10.2}Using DOLFIN Built-In Geometry with Subdomains Outside of Mesh Library}{29}
-\contentsline {section}{\numberline {10.3}Advanced mesh generation}{31}
-\contentsline {section}{\numberline {10.4}References}{32}
-\contentsline {chapter}{Bibliography}{33}
+\contentsline {subsection}{Exporting data from an old version of StochSS (1.2 or previous)}{13}
+\contentsline {chapter}{\chapternumberline {3}Sensitivity Analysis}{14}
+\contentsline {section}{\numberline {3.1}Example: Michaelis-Menten}{14}
+\contentsline {chapter}{\chapternumberline {4}StochOptim: Parameter Estimation}{15}
+\contentsline {section}{\numberline {4.1}Example: Estimate parameters of a birth-death model}{15}
+\contentsline {subsection}{StochOptim input file format}{16}
+\contentsline {chapter}{\chapternumberline {5}Spatial Stochastic Simulations}{17}
+\contentsline {section}{\numberline {5.1}Example: Annihilation of two species in a cylinder}{17}
+\contentsline {chapter}{\chapternumberline {6}Cloud Computing}{19}
+\contentsline {section}{\numberline {6.1}Credentials}{19}
+\contentsline {subsection}{Setting Credentials in StochSS}{19}
+\contentsline {subsection}{Launching and Shutting Down Nodes}{20}
+\contentsline {section}{\numberline {6.2}Job Reproduction}{20}
+\contentsline {subsection}{An Example on Job Reproduction}{20}
+\contentsline {section}{\numberline {6.3}Cost Analysis}{21}
+\contentsline {subsection}{An Example on Job Reproduction}{22}
+\contentsline {chapter}{\chapternumberline {7}Parameter Sweeps}{23}
+\contentsline {chapter}{\chapternumberline {8}Visualization}{25}
+\contentsline {section}{\numberline {8.1}Surface Renderings with Domain Clipping}{25}
+\contentsline {section}{\numberline {8.2}Colorized Wireframe Meshes}{26}
+\contentsline {section}{\numberline {8.3}Volume Rendering}{26}
+\contentsline {section}{\numberline {8.4}Visualization in Interactive Jupyter Notebook}{26}
+\contentsline {chapter}{\chapternumberline {9}Flex Cloud}{28}
+\contentsline {section}{\numberline {9.1}Setting Up Flex Cloud Compute Machines}{28}
+\contentsline {subsection}{Preparing the Flex Cloud compute nodes}{28}
+\contentsline {subsection}{Configuring the compute nodes in StochSS}{28}
+\contentsline {chapter}{\chapternumberline {10}Import a custom mesh}{30}
+\contentsline {section}{\numberline {10.1}Mesh library}{30}
+\contentsline {section}{\numberline {10.2}Using DOLFIN Built-In Geometry with Subdomains Outside of Mesh Library}{30}
+\contentsline {section}{\numberline {10.3}Advanced mesh generation}{32}
+\contentsline {section}{\numberline {10.4}References}{33}
+\contentsline {chapter}{Bibliography}{34}
