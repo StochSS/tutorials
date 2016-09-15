@@ -1,5 +1,7 @@
 \contentsline {chapter}{Contents}{2}
 \contentsline {chapter}{\chapternumberline {1}Installation}{4}
+\contentsline {section}{\numberline {1.1}Try StochSS}{4}
+\contentsline {section}{\numberline {1.2}Install StochSS}{4}
 \contentsline {chapter}{\chapternumberline {2}Basic Introduction}{5}
 \contentsline {section}{\numberline {2.1}Creating Administrator and Standard User Accounts}{5}
 \contentsline {section}{\numberline {2.2}Importing a Model}{6}

@@ -1,7 +1,9 @@
+%!TEX root = ../main.tex
+
 \chapter{StochOptim: Parameter Estimation}
 \label{chapter-stochoptim}
 
-StochSS implements parameter estimation for stochastic biochemical systems, StochOptim, via the Monte Carlo expectation-maximization with Modified Cross-Entropy method (MCEM$^2$) \cite{bernie}.
+StochSS implements parameter estimation for stochastic well-mixed biochemical systems, StochOptim, via the Monte Carlo expectation-maximization with Modified Cross-Entropy method (MCEM$^2$) \cite{bernie}.
 MCEM$^2$ computes maximum likelihood parameter estimates (MLEs) and associated uncertainties in three consecutive phases: cross-entropy, Monte Carlo expectation-maximization (MCEM), and uncertainty quantification \cite{bernie}.
 
 \section{Example: Estimate parameters of a birth-death model}

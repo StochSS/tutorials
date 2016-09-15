@@ -125,7 +125,7 @@ Create a concentration model or use the directions above to import one. Both Lot
   \begin{align}
   \mathrm{initial\_condition\_population} = \mathrm{initial\_condition\_concentration}\times\mathrm{volume}
   \end{align}
-   and attempts to convert the reaction rates. It is not always possible to convert reaction rates automatically. If automatic conversion fails the conversion still proceeds, but the user now has to correct the reactions that were not automatically converted.
+   and attempts to convert the reaction rates. It is not always possible to convert reaction rates automatically. During the conversion process StochSS lists all the reactions, and notifies the user of which reaction rates were successfully converted and which were not. If automatic conversion fails the conversion still proceeds, but the user now has to correct the reaction rates that were not automatically converted.
   \item Click \textbf{Finish conversion} at the bottom left of the page to create a population-based model. This newly created population model can be simulated using both deterministic and stochastic solvers.
   \item Click \textbf{Cancel conversion} to cancel the conversion.
 \end{enumerate}

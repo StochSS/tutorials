@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 SEP 2016 20:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  15 SEP 2016 11:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1335,13 +1335,13 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 6.99199pt on input line 1.
 
-[2]) (./Install.tex [3]) (./T1/tutorial1.tex [4
+[2]) (./Install.tex [3]
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 5.
+) (./T1/tutorial1.tex [4
 
 ]
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 7.
-
-<T1/admin.png, id=30, 618.31pt x 364.36125pt>
+<T1/admin.png, id=31, 618.31pt x 364.36125pt>
 File: T1/admin.png Graphic file (type png)
  <use T1/admin.png>
 Package pdftex.def Info: T1/admin.png used on input line 13.
@@ -1775,10 +1775,10 @@ bibitemlist
 
  (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 27486 strings out of 493117
- 528927 string characters out of 6135433
- 678637 words of memory out of 5000000
- 30446 multiletter control sequences out of 15000+600000
+ 27487 strings out of 493117
+ 528935 string characters out of 6135433
+ 679050 words of memory out of 5000000
+ 30447 multiletter control sequences out of 15000+600000
  92547 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,17n,93p,10425b,2410s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1795,7 +1795,7 @@ dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2014/texmf-di
 st/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2014/texmf-dist
 /fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2014/texmf-dist/f
 onts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (29 pages, 1060237 bytes).
+Output written on main.pdf (29 pages, 1063896 bytes).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams
