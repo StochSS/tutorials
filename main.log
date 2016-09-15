@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 SEP 2016 12:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 SEP 2016 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1441,13 +1441,13 @@ Package pdftex.def Info: T6/T6_fig_costanalysis.png used on input line 70.
 (pdftex.def)             Requested size: 321.9051pt x 199.64742pt.
  [18 <./T6/T6_fig_reproduction1.png>])
 (./PSweep/psweep.tex [19 <./T6/T6_fig_costanalysis.png>]
-<Psweep/heatmap.png, id=98, 789.95125pt x 602.25pt>
+<Psweep/heatmap.png, id=98, 1648.1575pt x 1623.06375pt>
 File: Psweep/heatmap.png Graphic file (type png)
- <use Psweep/heatmap.png>
+
+<use Psweep/heatmap.png>
 Package pdftex.def Info: Psweep/heatmap.png used on input line 12.
-(pdftex.def)             Requested size: 420.84865pt x 320.8543pt.
-)
-(./Vis/vis.tex [20
+(pdftex.def)             Requested size: 420.84865pt x 414.43301pt.
+) (./Vis/vis.tex [20
 
 ] [21 <./Psweep/heatmap.png>]
 <Vis/surface.png, id=106, 425.59pt x 173.64874pt>
@@ -1777,7 +1777,7 @@ bibitemlist
 Here is how much of TeX's memory you used:
  27486 strings out of 493117
  528927 string characters out of 6135433
- 678633 words of memory out of 5000000
+ 678637 words of memory out of 5000000
  30446 multiletter control sequences out of 15000+600000
  92547 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1795,7 +1795,7 @@ dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2014/texmf-di
 st/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2014/texmf-dist
 /fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2014/texmf-dist/f
 onts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (29 pages, 1018829 bytes).
+Output written on main.pdf (29 pages, 1060237 bytes).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams
