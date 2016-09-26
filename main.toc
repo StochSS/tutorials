@@ -1,42 +1,40 @@
 \contentsline {chapter}{Contents}{2}
-\contentsline {chapter}{\chapternumberline {1}Introduction}{4}
-\contentsline {section}{\numberline {1.1}Prerequisites}{4}
-\contentsline {chapter}{\chapternumberline {2}Basic Introduction to StochSS}{6}
-\contentsline {section}{\numberline {2.1}Prerequisites}{6}
-\contentsline {section}{\numberline {2.2} Creating Administrator and Standard User Accounts}{7}
-\contentsline {section}{\numberline {2.3} Importing a Model}{8}
-\contentsline {subsection}{Importing an existing StochKit2 model (population model)}{8}
-\contentsline {subsection}{Importing an existing StochKit2 Model (concentration-based model)}{8}
+\contentsline {chapter}{\chapternumberline {1}Installation}{4}
+\contentsline {section}{\numberline {1.1}Try StochSS}{4}
+\contentsline {section}{\numberline {1.2}Install StochSS}{4}
+\contentsline {chapter}{\chapternumberline {2}Basic Introduction}{5}
+\contentsline {section}{\numberline {2.1}Creating Administrator and Standard User Accounts}{5}
+\contentsline {section}{\numberline {2.2}Importing a Model}{6}
+\contentsline {subsection}{Importing an existing model}{6}
+\contentsline {section}{\numberline {2.3}Creating a New Model}{7}
+\contentsline {section}{\numberline {2.4}Running a Simulation and Visualizing results}{8}
 \contentsline {subsection}{Converting a concentration model to population}{8}
-\contentsline {section}{\numberline {2.4}Creating a New Model}{9}
-\contentsline {section}{\numberline {2.5}Cloud Computing}{9}
-\contentsline {subsection}{Sign up for an Amazon Web Services account (if you do not already have one).}{10}
-\contentsline {subsection}{Download and save your EC2 credentials}{10}
-\contentsline {section}{\numberline {2.6}Running a Simulation}{11}
-\contentsline {subsection}{Locally}{11}
-\contentsline {subsection}{In the cloud}{11}
-\contentsline {section}{\numberline {2.7}Analyzing the Results}{12}
-\contentsline {section}{\numberline {2.8}Backup and Transfer your Data}{12}
-\contentsline {chapter}{\chapternumberline {3}Sensitivity Analysis with StochSS}{14}
-\contentsline {section}{\numberline {3.1}Forward Sensitivity Analysis}{14}
-\contentsline {section}{\numberline {3.2}An Instructive Example}{14}
-\contentsline {subsection}{Scaling in sensitivity analysis}{14}
-\contentsline {chapter}{\chapternumberline {4}StochOptim: Parameter Estimation with StochSS}{18}
-\contentsline {section}{\numberline {4.1}Prerequisites}{18}
-\contentsline {section}{\numberline {4.2}StochOptim: Parameter Estimation for Stochastic Biochemical Systems}{18}
-\contentsline {subsection}{An Instructive Example}{18}
-\contentsline {subsection}{StochOptim file format}{19}
-\contentsline {chapter}{\chapternumberline {5}Spatial Stochastic Simulations with StochSS}{20}
-\contentsline {section}{\numberline {5.1}Prerequisites}{20}
-\contentsline {section}{\numberline {5.2}Spatial Stochastic Simulations}{21}
-\contentsline {subsection}{An Instructive Example}{21}
-\contentsline {chapter}{\chapternumberline {6}Cloud Computing with StochSS}{23}
-\contentsline {section}{\numberline {6.1}Credentials}{24}
-\contentsline {subsection}{An Instructive Example on Setting Credentials}{24}
-\contentsline {section}{\numberline {6.2}Compute Node}{25}
-\contentsline {subsection}{An Example on Launching and Shutting Down Nodes}{25}
-\contentsline {section}{\numberline {6.3}Reproduction}{27}
-\contentsline {subsection}{An Example on Job Reproduction}{27}
-\contentsline {section}{\numberline {6.4}Cost Analysis}{29}
-\contentsline {subsection}{An Example on Job Reproduction}{29}
-\contentsline {chapter}{Bibliography}{30}
+\contentsline {section}{\numberline {2.5}Backup and Transfer your Data}{9}
+\contentsline {subsection}{Exporting data from an old version of StochSS (1.2 or previous)}{10}
+\contentsline {chapter}{\chapternumberline {3}Sensitivity Analysis}{11}
+\contentsline {section}{\numberline {3.1}Example: Michaelis-Menten}{11}
+\contentsline {chapter}{\chapternumberline {4}StochOptim: Parameter Estimation}{12}
+\contentsline {section}{\numberline {4.1}Example: Estimate parameters of a birth-death model}{12}
+\contentsline {subsection}{StochOptim input file format}{13}
+\contentsline {chapter}{\chapternumberline {5}Spatial Stochastic Simulations}{14}
+\contentsline {section}{\numberline {5.1}Example: Annihilation of two species in a cylinder}{14}
+\contentsline {chapter}{\chapternumberline {6}Cloud Computing}{16}
+\contentsline {section}{\numberline {6.1}Credentials}{16}
+\contentsline {subsection}{Setting Credentials in StochSS}{16}
+\contentsline {subsection}{Launching and Shutting Down Nodes}{17}
+\contentsline {section}{\numberline {6.2}Job Reproduction}{17}
+\contentsline {subsection}{An Example on Job Reproduction}{17}
+\contentsline {section}{\numberline {6.3}Cost Analysis}{18}
+\contentsline {subsection}{An Example on Job Reproduction}{19}
+\contentsline {chapter}{\chapternumberline {7}Parameter Sweeps}{20}
+\contentsline {chapter}{\chapternumberline {8}Visualization}{22}
+\contentsline {section}{\numberline {8.1}Surface Renderings with Domain Clipping}{22}
+\contentsline {section}{\numberline {8.2}Colorized Wireframe Meshes}{23}
+\contentsline {section}{\numberline {8.3}Volume Rendering}{23}
+\contentsline {section}{\numberline {8.4}Visualization in Interactive Jupyter Notebook}{23}
+\contentsline {chapter}{\chapternumberline {9}Import a custom mesh}{25}
+\contentsline {section}{\numberline {9.1}Mesh library}{25}
+\contentsline {section}{\numberline {9.2}Using DOLFIN Built-In Geometry with Subdomains Outside of Mesh Library}{25}
+\contentsline {section}{\numberline {9.3}Advanced mesh generation}{27}
+\contentsline {section}{\numberline {9.4}References}{28}
+\contentsline {chapter}{Bibliography}{29}

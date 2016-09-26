@@ -1,3 +1,5 @@
+%!TEX root = ../main.tex
+
 \chapter{Basic Introduction}
 \label{chapter1}
 This tutorial will guide you through the basic features of StochSS. You will become familiar with the \textbf{Model Editor} and the \textbf{Simulation Manager}. You will learn how to create your own model, which can be population or concentration-based, and how to simulate it using either an ordinary differential equation (ODE) solver or the stochastic simulation algorithm (SSA).
@@ -44,9 +46,19 @@ The best way to get started with the model editor is to import an example model 
   \item Click \textbf{Import}.
 \end{enumerate}
 
-After importing the XML file or public model, StochSS should display the imported model in the model editor.
+\noindent\underline{Option 3: SBML}
+\begin{enumerate}
+  \item Navigate to the \textbf{Model Editor} page.
+  \item Click \textbf{SBML} in the right-hand toolbar.
+  \item Select an SBML file and click submit.
+\end{enumerate}
+
+Note that due to limitations with the SBML standard, StochSS only supports non-spatial models in this format.
+
+After importing the model, StochSS should display the imported model in the model editor.
 Look through the page to see how the different \textbf{Species}, \textbf{Parameters}, and \textbf{Reactions} are defined.
-By clicking \textbf{Export to .zip} or \textbf{Export to Public Library} the model can be shared across computers or shared amongst users of the same StochSS.
+
+By clicking \textbf{Export to .zip}, \textbf{Export to Public Library}, or \textbf{Export to SBML}, the model can be shared across computers or shared amongst users of the same StochSS.
 
 \section{Creating a New Model}
 An example population model is defined by the following two reactions:
@@ -113,7 +125,7 @@ Create a concentration model or use the directions above to import one. Both Lot
   \begin{align}
   \mathrm{initial\_condition\_population} = \mathrm{initial\_condition\_concentration}\times\mathrm{volume}
   \end{align}
-   and attempts to convert the reaction rates. It is not always possible to convert reaction rates automatically. If automatic conversion fails the conversion still proceeds, but the user now has to correct the reactions that were not automatically converted.
+   and attempts to convert the reaction rates. It is not always possible to convert reaction rates automatically. During the conversion process StochSS lists all the reactions, and notifies the user of which reaction rates were successfully converted and which were not. If automatic conversion fails the conversion still proceeds, but the user now has to correct the reaction rates that were not automatically converted.
   \item Click \textbf{Finish conversion} at the bottom left of the page to create a population-based model. This newly created population model can be simulated using both deterministic and stochastic solvers.
   \item Click \textbf{Cancel conversion} to cancel the conversion.
 \end{enumerate}

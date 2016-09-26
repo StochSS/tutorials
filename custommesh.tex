@@ -1,0 +1,195 @@
+%!TEX root = main.tex
+
+\chapter{Import a custom mesh}
+
+When setting up a spatial problem in StochSS information about the geometry needs to be provided through two files: a
+file containing the mesh information in DOLFIN XML format and a text file containing information about subdomains. The
+file with subdomain information is optional in general (if it is not provided the entire mesh will belong to one subdomain).
+Below is a tutorial on how to provide that information in a variety of cases.
+
+\section{Mesh library}
+
+The first and simplest scenario is using one of the default built-in meshes provided by StochSS in the Mesh Library.
+These include simple example mesh and subdomain combinations that are common in biological modeling. For example
+there is a unit sphere with a membrane (i.e. the volume is one subdomain and the surface is another), a unit cube witha
+membrane, a cylinder with the two ends being different subdomains among others. If for a given problem these are not
+sufficient then mesh and subdomain information can be provided by attaching files. One simple case where creating and
+attaching a file may be necessary could involve using the DOLFIN built in meshes but with different subdomains than
+provided in the Mesh Library. This can be done as follows.
+
+\section{Using DOLFIN Built-In Geometry with Subdomains Outside of Mesh Library}
+
+For example consider a sphere with three different subdomains: the top half of the membrane, the bottom half of the
+membrane and the volume. This can be done using PyURDME as follows (PyURDME and FEniCS are software packages
+that are automatically installed during the StochSS installation and DOLFIN is a library within FEniCS).
+
+In an IPython Notebook, import the appropriate libraries:
+
+\begin{ipythonnb}
+import os,pyurdme,dolfin
+\end{ipythonnb}
+
+Next classes are constructed to define the desired subdomains:
+
+\begin{ipythonnb}
+class top_half_membrane(dolfin.SubDomain):
+	def inside(self,x,on_boundary):
+	return on_boundary and x[2]>=0
+	
+class bottom_half_membrane(dolfin.SubDomain):
+	def inside(self,x,on_boundary):
+	return on_boundary and x[2]<=0
+\end{ipythonnb}
+
+Then a pyurdme model is created with the desired geometry and marked subdomains:
+
+\begin{ipythonnb}
+class sphere_top_bot(pyurdme.URDMEModel):
+	def __init__(self,model_name="polarization"):
+		pyurdme.URDMEModel.__init__(self,model_name)
+		
+		#DefineGeometry
+		sphere=dolfin.Sphere(dolfin.Point(0.0,0.0,0.0),1.0)
+		self.mesh=pyurdme.URDMEMesh(mesh=dolfin.Mesh(sphere,10))
+
+		cell_function=dolfin.CellFunction("size_t",self.mesh)
+		cell_function.set_all(1)
+
+		facet_function=dolfin.FacetFunction("size_t",self.mesh)
+		facet_function.set_all(0)
+
+		top_membrane=top_half_membrane()
+		top_membrane.mark(facet_function,2)
+
+		bottom_membrane=bottom_half_membrane()
+		bottom_membrane.mark(facet_function,3)
+
+		self.add_subdomain(cell_function)
+		self.add_subdomain(facet_function)
+
+		#Define initial populations
+		self.set_initial_condition_scatter({},[1])
+\end{ipythonnb}
+
+\begin{ipythonnb}
+model = sphere_top_bot()
+\end{ipythonnb}
+
+The subdmain infomation can then be extracted from the model as follows:
+\begin{ipythonnb}
+sd = model.get_subdomain_vector()
+\end{ipythonnb}
+
+And finally two files are created to store the mesh and subdomain information respectively in the the correct format:
+\begin{ipythonnb}
+\# This is a dolfin xml file with mesh information
+dolfin.File("sphere_top_bot_mesh.xml") << model.mesh
+\end{ipythonnb}
+
+\begin{ipythonnb}
+\ampersand This is the file to capture information about subdomains
+with open("sphere_top_bot_subdomains.txt",'w') as fd:
+	for ndx,val in enumerate(sd):
+		fd.write("{0},{1}\n".format(ndx,val))
+\end{ipythonnb}
+Now that these two files have been created they can be attached in the Mesh tab of the model editor in StochSS and the
+rest of the problem can be defined from there. Again it is important to note that if a problem does not involve subdomains
+then only the mesh XML file is necessary and the entire mesh will be given the same domain! One last situation that could
+arise in defining spatial information is that a mesh has to be created in external software then converted to the correct
+format.
+
+\section{Advanced mesh generation}
+
+For many real world applications the geometry involved will be more complicated than the built?in meshes provided by
+DOFLIN (and by extension StochSS). In these situations a mesh will have to be created in an external program such as
+Gmsh then converted into the DOLFIN XML format. Once the mesh has been created in an external program the
+conversion to DOLFIN XML format can easily be done by the built in script dolfin?convert [1]. The following command line
+code demonstrates how to convert from the Gmsh format (suffix .msh or .gmsh) to DOLFIN XML format.
+
+The following needs to be run from the command line in the Terminal:
+\begin{verbatim}
+dolfin-convert mesh.msh mesh.xml
+\end{verbatim}
+
+File formats that are currently supported by the dolfin-convert script can be found in the table below:
+
+\begin{table}[htp]
+   \begin{tabular}{| l | l |} % Column formatting, @{} suppresses leading/trailing space
+   \toprule
+      Suffix   & File Format\\
+      \midrule
+     .xml & DOLFIN XML format\\
+     .ele / .node & Triangle file format\\
+     .mesh & Medit format, generated by TetGen with option ?g\\
+     .msh / .gmsh & Gmsh version 2.0 format\\
+     .grid & Diffpack tetrahedral grid format\\
+     .inp & Diffpack tetrahedral grid format\\
+     .e / .exo & Sandia Exodus II file format\\
+     .ncdf & ncdump'ed Exodus II file format\\
+     .vrt / .cell & StarCD tetrahedral grid format\\
+     \bottomrule
+   \end{tabular}
+   \end{table}
+
+
+
+The XML file that is created from the dolfin?convert command can then be used directly in StochSS. If subdomains are
+required then a text file can be created using code similar to that above. Consider the situation where the XML file created
+was called "coli.xml" then the code to create a subdomain file consisting of the outer membrane would look as follows:
+
+\begin{ipythonnb}
+import os,pyurdme,dolfin
+\end{ipythonnb}
+
+\begin{ipythonnb}
+class Membrane(dolfin.SubDomain):
+	def inside(self,x,on_boundary):
+	return on_boundary
+\end{ipythonnb}
+
+\begin{ipythonnb}
+class ecoli(pyurdme.URDMEModel):
+	def __init__(self,model_name="polarization"):
+		pyurdme.URDMEModel.__init__(self,model_name)
+		
+		#DefineGeometry
+		self.mesh=pyurdme.URDMEMesh(mesh=dolfin.Mesh('coli.xml'))
+
+		cell_function=dolfin.CellFunction("size_t",self.mesh)
+		cell_function.set_all(1)
+
+		facet_function=dolfin.FacetFunction("size_t",self.mesh)
+		facet_function.set_all(0)
+
+		membrane=Membrane()
+		membrane.mark(facet_function,2)
+
+		self.add_subdomain(cell_function)
+		self.add_subdomain(facet_function)
+
+		#Define initial populations
+		self.set_initial_condition_scatter({},[1])
+\end{ipythonnb}
+
+\begin{ipythonnb}
+model=ecoli()
+\end{ipythonnb}
+
+\begin{ipythonnb}
+sd=model.get_subdomain_vector()
+\end{ipythonnb}
+
+\begin{ipythonnb}
+\#This is the file to capture information about subdomains
+with open("coli_subdomains.txt",'w') as fd:
+	for ndx,val in enumerate(sd):
+		fd.write("{0},{1}\n".format(ndx,val))
+\end{ipythonnb}
+
+Now all of the necessary files have been created. The "coli.xml" file that was created using a dolfin?convert command and
+the "coli\_subdomains.txt" just created can be uploaded directly to StochSS and used accordingly.
+
+\section{References}
+
+1. A. Logg, K.?A. Mardal, G. N. Wells et al. Automated Solution of Partial Differential Equations by the Finite Element Method: The FEniCS Book. Springer 2012.
+
